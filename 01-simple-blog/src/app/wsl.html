@@ -1,0 +1,2783 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+	<meta charset="UTF-8" />
+	<script>
+		if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}
+	</script>
+	<script>
+		(()=>{class RocketLazyLoadScripts{constructor(){this.v="1.2.5.1",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this.t.bind(this),this.touchStartHandler=this.i.bind(this),this.touchMoveHandler=this.o.bind(this),this.touchEndHandler=this.h.bind(this),this.clickHandler=this.u.bind(this),this.interceptedClicks=[],this.interceptedClickListeners=[],this.l(this),window.addEventListener("pageshow",(t=>{this.persisted=t.persisted,this.everythingLoaded&&this.m()})),document.addEventListener("DOMContentLoaded",(()=>{this.p()})),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}k(t){document.hidden?t.t():(this.triggerEvents.forEach((e=>window.addEventListener(e,t.userEventHandler,{passive:!0}))),window.addEventListener("touchstart",t.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",t.touchStartHandler),document.addEventListener("visibilitychange",t.userEventHandler))}_(){this.triggerEvents.forEach((t=>window.removeEventListener(t,this.userEventHandler,{passive:!0}))),document.removeEventListener("visibilitychange",this.userEventHandler)}i(t){"HTML"!==t.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),t.target.addEventListener("click",this.clickHandler),this.L(t.target,!0),this.M(t.target,"onclick","rocket-onclick"),this.C())}o(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),t.target.removeEventListener("click",this.clickHandler),this.L(t.target,!1),this.M(t.target,"rocket-onclick","onclick"),this.O()}h(){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}u(t){t.target.removeEventListener("click",this.clickHandler),this.L(t.target,!1),this.M(t.target,"rocket-onclick","onclick"),this.interceptedClicks.push(t),t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),this.O()}D(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach((t=>{t.target.dispatchEvent(new MouseEvent("click",{view:t.view,bubbles:!0,cancelable:!0}))}))}l(t){EventTarget.prototype.addEventListenerBase=EventTarget.prototype.addEventListener,EventTarget.prototype.addEventListener=function(e,i,o){"click"!==e||t.windowLoaded||i===t.clickHandler||t.interceptedClickListeners.push({target:this,func:i,options:o}),(this||window).addEventListenerBase(e,i,o)}}L(t,e){this.interceptedClickListeners.forEach((i=>{i.target===t&&(e?t.removeEventListener("click",i.func,i.options):t.addEventListener("click",i.func,i.options))})),t.parentNode!==document.documentElement&&this.L(t.parentNode,e)}S(){return new Promise((t=>{this.T?this.O=t:t()}))}C(){this.T=!0}O(){this.T=!1}M(t,e,i){t.hasAttribute&&t.hasAttribute(e)&&(event.target.setAttribute(i,event.target.getAttribute(e)),event.target.removeAttribute(e))}t(){this._(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this.R.bind(this)):this.R()}p(){let t=[];document.querySelectorAll("script[type=rocketlazyloadscript][data-rocket-src]").forEach((e=>{let i=e.getAttribute("data-rocket-src");if(i&&0!==i.indexOf("data:")){0===i.indexOf("//")&&(i=location.protocol+i);try{const o=new URL(i).origin;o!==location.origin&&t.push({src:o,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(t){}}})),t=[...new Map(t.map((t=>[JSON.stringify(t),t]))).values()],this.j(t,"preconnect")}async R(){this.lastBreath=Date.now(),this.P(this),this.F(this),this.q(),this.A(),this.I(),await this.U(this.delayedScripts.normal),await this.U(this.delayedScripts.defer),await this.U(this.delayedScripts.async);try{await this.W(),await this.H(this),await this.J()}catch(t){console.error(t)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this.S().then((()=>{this.D()})),this.N()}A(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)}))}async B(t){if(await this.G(),!0!==t.noModule||!("noModule"in HTMLScriptElement.prototype))return new Promise((e=>{let i;function o(){(i||t).setAttribute("data-rocket-status","executed"),e()}try{if(navigator.userAgent.indexOf("Firefox/")>0||""===navigator.vendor)i=document.createElement("script"),[...t.attributes].forEach((t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),i.setAttribute(e,t.nodeValue))})),t.text&&(i.text=t.text),i.hasAttribute("src")?(i.addEventListener("load",o),i.addEventListener("error",(function(){i.setAttribute("data-rocket-status","failed"),e()})),setTimeout((()=>{i.isConnected||e()}),1)):(i.text=t.text,o()),t.parentNode.replaceChild(i,t);else{const i=t.getAttribute("data-rocket-type"),n=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",o),t.addEventListener("error",(function(){t.setAttribute("data-rocket-status","failed"),e()})),n?(t.removeAttribute("data-rocket-src"),t.src=n):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}}catch(i){t.setAttribute("data-rocket-status","failed"),e()}}));t.setAttribute("data-rocket-status","skipped")}async U(t){const e=t.shift();return e&&e.isConnected?(await this.B(e),this.U(t)):Promise.resolve()}I(){this.j([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}j(t,e){var i=document.createDocumentFragment();t.forEach((t=>{const o=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(o){const n=document.createElement("link");n.href=o,n.rel=e,"preconnect"!==e&&(n.as="script"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),i.appendChild(n),this.trash.push(n)}})),document.head.appendChild(i)}P(t){let e={};function i(i,o){return e[o].eventsToRewrite.indexOf(i)>=0&&!t.everythingLoaded?"rocket-"+i:i}function o(t,o){!function(t){e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=i(arguments[0],t),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=i(arguments[0],t),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(o)}function n(e,i){let o=e[i];e[i]=null,Object.defineProperty(e,i,{get:()=>o||function(){},set(n){t.everythingLoaded?o=n:e["rocket"+i]=o=n}})}o(document,"DOMContentLoaded"),o(window,"DOMContentLoaded"),o(window,"load"),o(window,"pageshow"),o(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}F(t){let e;function i(e){return t.everythingLoaded?e:e.split(" ").map((t=>"load"===t||0===t.indexOf("load.")?"rocket-jquery-load":t)).join(" ")}function o(o){if(o&&o.fn&&!t.allJQueries.includes(o)){o.fn.ready=o.fn.init.prototype.ready=function(e){return t.domReadyFired?e.bind(document)(o):document.addEventListener("rocket-DOMContentLoaded",(()=>e.bind(document)(o))),o([])};const e=o.fn.on;o.fn.on=o.fn.init.prototype.on=function(){return this[0]===window&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{const e=arguments[0][t];delete arguments[0][t],arguments[0][i(t)]=e}))),e.apply(this,arguments),this},t.allJQueries.push(o)}e=o}o(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){o(t)}})}async H(t){const e=document.querySelector("script[data-webpack]");e&&(await async function(){return new Promise((t=>{e.addEventListener("load",t),e.addEventListener("error",t)}))}(),await t.K(),await t.H(t))}async W(){this.domReadyFired=!0,await this.G(),document.dispatchEvent(new Event("rocket-readystatechange")),await this.G(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.G(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this.G(),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}async J(){await this.G(),document.dispatchEvent(new Event("rocket-readystatechange")),await this.G(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.G(),window.dispatchEvent(new Event("rocket-load")),await this.G(),window.rocketonload&&window.rocketonload(),await this.G(),this.allJQueries.forEach((t=>t(window).trigger("rocket-jquery-load"))),await this.G();const t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this.G(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted}),this.windowLoaded=!0}m(){document.onreadystatechange&&document.onreadystatechange(),window.onload&&window.onload(),window.onpageshow&&window.onpageshow({persisted:this.persisted})}q(){const t=new Map;document.write=document.writeln=function(e){const i=document.currentScript;i||console.error("WPRocket unable to document.write this: "+e);const o=document.createRange(),n=i.parentElement;let s=t.get(i);void 0===s&&(s=i.nextSibling,t.set(i,s));const c=document.createDocumentFragment();o.setStart(c,0),c.appendChild(o.createContextualFragment(e)),n.insertBefore(c,s)}}async G(){Date.now()-this.lastBreath>45&&(await this.K(),this.lastBreath=Date.now())}async K(){return document.hidden?new Promise((t=>setTimeout(t))):new Promise((t=>requestAnimationFrame(t)))}N(){this.trash.forEach((t=>t.remove()))}static run(){const t=new RocketLazyLoadScripts;t.k(t)}}RocketLazyLoadScripts.run()})();
+	</script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="profile" href="https://gmpg.org/xfn/11" />
+	<meta name="google-adsense-account" content="ca-pub-8116185194951320">
+
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style>
+		img:is([sizes="auto"i], [sizes^="auto,"i]) {
+			contain-intrinsic-size: 3000px 1500px
+		}
+	</style>
+
+	<!-- This site is optimized with the Yoast SEO Premium plugin v22.8 (Yoast SEO v22.8) - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>How Safe is Public Wi-Fi? A Network Engineer Explains | Web Security Lab</title>
+	<link rel="canonical" href="https://websecuritylab.org/how-safe-is-public-wi-fi-a-network-engineer-explains/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="How Safe is Public Wi-Fi? A Network Engineer Explains" />
+	<meta property="og:description"
+		content="Public Wi-Fi is a modern convenience, but it comes with certain security risks. While it offers easy internet&hellip;" />
+	<meta property="og:url"
+		content="https://websecuritylab.org/how-safe-is-public-wi-fi-a-network-engineer-explains/" />
+	<meta property="og:site_name" content="Web Security Lab" />
+	<meta property="article:published_time" content="2025-04-07T10:47:19+00:00" />
+	<meta property="article:modified_time" content="2025-04-07T10:47:21+00:00" />
+	<meta property="og:image" content="https://websecuritylab.org/wp-content/uploads/2025/04/Wifi-1024x576.png" />
+	<meta property="og:image:width" content="1024" />
+	<meta property="og:image:height" content="576" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="author" content="Chidiadi Anyanwu" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@websecuritylab" />
+	<meta name="twitter:site" content="@websecuritylab" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Chidiadi Anyanwu" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="8 minutes" />
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+	<link rel='dns-prefetch' href='//pagead2.googlesyndication.com' />
+	<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+	<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+	<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+	<link rel="alternate" type="application/rss+xml" title="Web Security Lab &raquo; Feed"
+		href="https://websecuritylab.org/feed/" />
+	<link rel="alternate" type="application/rss+xml" title="Web Security Lab &raquo; Comments Feed"
+		href="https://websecuritylab.org/comments/feed/" />
+	<link rel="alternate" type="application/rss+xml"
+		title="Web Security Lab &raquo; How Safe is Public Wi-Fi? A Network Engineer Explains Comments Feed"
+		href="https://websecuritylab.org/how-safe-is-public-wi-fi-a-network-engineer-explains/feed/" />
+	<link rel="preload" href="https://websecuritylab.org/wp-content/plugins/canvas/assets/fonts/canvas-icons.woff"
+		as="font" type="font/woff" crossorigin>
+	<link rel='stylesheet' id='canvas-css'
+		href='https://websecuritylab.org/wp-content/plugins/canvas/assets/css/canvas.css?ver=2.4.7' media='all' />
+	<link rel='alternate stylesheet' id='powerkit-icons-css'
+		href='https://websecuritylab.org/wp-content/plugins/powerkit/assets/fonts/powerkit-icons.woff?ver=2.9.6'
+		as='font' type='font/wof' crossorigin />
+	<link rel='stylesheet' id='powerkit-css'
+		href='https://websecuritylab.org/wp-content/plugins/powerkit/assets/css/powerkit.css?ver=2.9.6' media='all' />
+	<link rel='stylesheet' id='wp-block-library-css'
+		href='https://websecuritylab.org/wp-includes/css/dist/block-library/style.min.css?ver=6.7.2' media='all' />
+	<link rel='stylesheet' id='canvas-block-alert-style-css'
+		href='https://websecuritylab.org/wp-content/plugins/canvas/components/basic-elements/block-alert/block.css?ver=1734334210'
+		media='all' />
+	<link rel='stylesheet' id='canvas-block-progress-style-css'
+		href='https://websecuritylab.org/wp-content/plugins/canvas/components/basic-elements/block-progress/block.css?ver=1734334210'
+		media='all' />
+	<link rel='stylesheet' id='canvas-block-collapsibles-style-css'
+		href='https://websecuritylab.org/wp-content/plugins/canvas/components/basic-elements/block-collapsibles/block.css?ver=1734334210'
+		media='all' />
+	<link rel='stylesheet' id='canvas-block-tabs-style-css'
+		href='https://websecuritylab.org/wp-content/plugins/canvas/components/basic-elements/block-tabs/block.css?ver=1734334210'
+		media='all' />
+	<link rel='stylesheet' id='canvas-block-section-heading-style-css'
+		href='https://websecuritylab.org/wp-content/plugins/canvas/components/basic-elements/block-section-heading/block.css?ver=1734334210'
+		media='all' />
+	<link rel='stylesheet' id='canvas-block-section-style-css'
+		href='https://websecuritylab.org/wp-content/plugins/canvas/components/layout-blocks/block-section/block-section.css?ver=1734334210'
+		media='all' />
+	<link rel='stylesheet' id='canvas-block-row-style-css'
+		href='https://websecuritylab.org/wp-content/plugins/canvas/components/layout-blocks/block-row/block-row.css?ver=1734334210'
+		media='all' />
+	<link rel='stylesheet' id='canvas-block-posts-style-css'
+		href='https://websecuritylab.org/wp-content/plugins/canvas/components/posts/block-posts/block-posts.css?ver=1734334210'
+		media='all' />
+	<link rel='stylesheet' id='canvas-justified-gallery-block-style-css'
+		href='https://websecuritylab.org/wp-content/plugins/canvas/components/justified-gallery/block/block-justified-gallery.css?ver=1734334210'
+		media='all' />
+	<link rel='stylesheet' id='canvas-slider-gallery-block-style-css'
+		href='https://websecuritylab.org/wp-content/plugins/canvas/components/slider-gallery/block/block-slider-gallery.css?ver=1734334210'
+		media='all' />
+	<link rel='stylesheet' id='canvas-block-posts-sidebar-css'
+		href='https://websecuritylab.org/wp-content/plugins/canvas/components/posts/block-posts-sidebar/block-posts-sidebar.css?ver=1734334210'
+		media='all' />
+	<style id='classic-theme-styles-inline-css'>
+		/*! This file is auto-generated */
+		.wp-block-button__link {
+			color: #fff;
+			background-color: #32373c;
+			border-radius: 9999px;
+			box-shadow: none;
+			text-decoration: none;
+			padding: calc(.667em + 2px) calc(1.333em + 2px);
+			font-size: 1.125em
+		}
+
+		.wp-block-file__button {
+			background: #32373c;
+			color: #fff;
+			text-decoration: none
+		}
+	</style>
+	<style id='global-styles-inline-css'>
+		:root {
+			--wp--preset--aspect-ratio--square: 1;
+			--wp--preset--aspect-ratio--4-3: 4/3;
+			--wp--preset--aspect-ratio--3-4: 3/4;
+			--wp--preset--aspect-ratio--3-2: 3/2;
+			--wp--preset--aspect-ratio--2-3: 2/3;
+			--wp--preset--aspect-ratio--16-9: 16/9;
+			--wp--preset--aspect-ratio--9-16: 9/16;
+			--wp--preset--color--black: #000000;
+			--wp--preset--color--cyan-bluish-gray: #abb8c3;
+			--wp--preset--color--white: #FFFFFF;
+			--wp--preset--color--pale-pink: #f78da7;
+			--wp--preset--color--vivid-red: #cf2e2e;
+			--wp--preset--color--luminous-vivid-orange: #ff6900;
+			--wp--preset--color--luminous-vivid-amber: #fcb900;
+			--wp--preset--color--light-green-cyan: #7bdcb5;
+			--wp--preset--color--vivid-green-cyan: #00d084;
+			--wp--preset--color--pale-cyan-blue: #8ed1fc;
+			--wp--preset--color--vivid-cyan-blue: #0693e3;
+			--wp--preset--color--vivid-purple: #9b51e0;
+			--wp--preset--color--blue: #59BACC;
+			--wp--preset--color--green: #58AD69;
+			--wp--preset--color--orange: #FFBC49;
+			--wp--preset--color--red: #e32c26;
+			--wp--preset--color--gray-50: #f8f9fa;
+			--wp--preset--color--gray-100: #f8f9fb;
+			--wp--preset--color--gray-200: #E0E0E0;
+			--wp--preset--color--primary: #1D1D1F;
+			--wp--preset--color--secondary: #616162;
+			--wp--preset--color--layout: #f1f1f2;
+			--wp--preset--color--border: #E4E4E4;
+			--wp--preset--color--divider: #1D1D1F;
+			--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+			--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+			--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+			--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+			--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+			--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+			--wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+			--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+			--wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+			--wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+			--wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+			--wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+			--wp--preset--font-size--small: 13px;
+			--wp--preset--font-size--medium: 20px;
+			--wp--preset--font-size--large: 36px;
+			--wp--preset--font-size--x-large: 42px;
+			--wp--preset--spacing--20: 0.44rem;
+			--wp--preset--spacing--30: 0.67rem;
+			--wp--preset--spacing--40: 1rem;
+			--wp--preset--spacing--50: 1.5rem;
+			--wp--preset--spacing--60: 2.25rem;
+			--wp--preset--spacing--70: 3.38rem;
+			--wp--preset--spacing--80: 5.06rem;
+			--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+			--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+			--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+			--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);
+			--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
+		}
+
+		:where(.is-layout-flex) {
+			gap: 0.5em;
+		}
+
+		:where(.is-layout-grid) {
+			gap: 0.5em;
+		}
+
+		body .is-layout-flex {
+			display: flex;
+		}
+
+		.is-layout-flex {
+			flex-wrap: wrap;
+			align-items: center;
+		}
+
+		.is-layout-flex> :is(*, div) {
+			margin: 0;
+		}
+
+		body .is-layout-grid {
+			display: grid;
+		}
+
+		.is-layout-grid> :is(*, div) {
+			margin: 0;
+		}
+
+		:where(.wp-block-columns.is-layout-flex) {
+			gap: 2em;
+		}
+
+		:where(.wp-block-columns.is-layout-grid) {
+			gap: 2em;
+		}
+
+		:where(.wp-block-post-template.is-layout-flex) {
+			gap: 1.25em;
+		}
+
+		:where(.wp-block-post-template.is-layout-grid) {
+			gap: 1.25em;
+		}
+
+		.has-black-color {
+			color: var(--wp--preset--color--black) !important;
+		}
+
+		.has-cyan-bluish-gray-color {
+			color: var(--wp--preset--color--cyan-bluish-gray) !important;
+		}
+
+		.has-white-color {
+			color: var(--wp--preset--color--white) !important;
+		}
+
+		.has-pale-pink-color {
+			color: var(--wp--preset--color--pale-pink) !important;
+		}
+
+		.has-vivid-red-color {
+			color: var(--wp--preset--color--vivid-red) !important;
+		}
+
+		.has-luminous-vivid-orange-color {
+			color: var(--wp--preset--color--luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-amber-color {
+			color: var(--wp--preset--color--luminous-vivid-amber) !important;
+		}
+
+		.has-light-green-cyan-color {
+			color: var(--wp--preset--color--light-green-cyan) !important;
+		}
+
+		.has-vivid-green-cyan-color {
+			color: var(--wp--preset--color--vivid-green-cyan) !important;
+		}
+
+		.has-pale-cyan-blue-color {
+			color: var(--wp--preset--color--pale-cyan-blue) !important;
+		}
+
+		.has-vivid-cyan-blue-color {
+			color: var(--wp--preset--color--vivid-cyan-blue) !important;
+		}
+
+		.has-vivid-purple-color {
+			color: var(--wp--preset--color--vivid-purple) !important;
+		}
+
+		.has-black-background-color {
+			background-color: var(--wp--preset--color--black) !important;
+		}
+
+		.has-cyan-bluish-gray-background-color {
+			background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+		}
+
+		.has-white-background-color {
+			background-color: var(--wp--preset--color--white) !important;
+		}
+
+		.has-pale-pink-background-color {
+			background-color: var(--wp--preset--color--pale-pink) !important;
+		}
+
+		.has-vivid-red-background-color {
+			background-color: var(--wp--preset--color--vivid-red) !important;
+		}
+
+		.has-luminous-vivid-orange-background-color {
+			background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-amber-background-color {
+			background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+		}
+
+		.has-light-green-cyan-background-color {
+			background-color: var(--wp--preset--color--light-green-cyan) !important;
+		}
+
+		.has-vivid-green-cyan-background-color {
+			background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+		}
+
+		.has-pale-cyan-blue-background-color {
+			background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+		}
+
+		.has-vivid-cyan-blue-background-color {
+			background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+		}
+
+		.has-vivid-purple-background-color {
+			background-color: var(--wp--preset--color--vivid-purple) !important;
+		}
+
+		.has-black-border-color {
+			border-color: var(--wp--preset--color--black) !important;
+		}
+
+		.has-cyan-bluish-gray-border-color {
+			border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+		}
+
+		.has-white-border-color {
+			border-color: var(--wp--preset--color--white) !important;
+		}
+
+		.has-pale-pink-border-color {
+			border-color: var(--wp--preset--color--pale-pink) !important;
+		}
+
+		.has-vivid-red-border-color {
+			border-color: var(--wp--preset--color--vivid-red) !important;
+		}
+
+		.has-luminous-vivid-orange-border-color {
+			border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-amber-border-color {
+			border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+		}
+
+		.has-light-green-cyan-border-color {
+			border-color: var(--wp--preset--color--light-green-cyan) !important;
+		}
+
+		.has-vivid-green-cyan-border-color {
+			border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+		}
+
+		.has-pale-cyan-blue-border-color {
+			border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+		}
+
+		.has-vivid-cyan-blue-border-color {
+			border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+		}
+
+		.has-vivid-purple-border-color {
+			border-color: var(--wp--preset--color--vivid-purple) !important;
+		}
+
+		.has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+			background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+		}
+
+		.has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+			background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+		}
+
+		.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+			background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-orange-to-vivid-red-gradient-background {
+			background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+		}
+
+		.has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+			background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+		}
+
+		.has-cool-to-warm-spectrum-gradient-background {
+			background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+		}
+
+		.has-blush-light-purple-gradient-background {
+			background: var(--wp--preset--gradient--blush-light-purple) !important;
+		}
+
+		.has-blush-bordeaux-gradient-background {
+			background: var(--wp--preset--gradient--blush-bordeaux) !important;
+		}
+
+		.has-luminous-dusk-gradient-background {
+			background: var(--wp--preset--gradient--luminous-dusk) !important;
+		}
+
+		.has-pale-ocean-gradient-background {
+			background: var(--wp--preset--gradient--pale-ocean) !important;
+		}
+
+		.has-electric-grass-gradient-background {
+			background: var(--wp--preset--gradient--electric-grass) !important;
+		}
+
+		.has-midnight-gradient-background {
+			background: var(--wp--preset--gradient--midnight) !important;
+		}
+
+		.has-small-font-size {
+			font-size: var(--wp--preset--font-size--small) !important;
+		}
+
+		.has-medium-font-size {
+			font-size: var(--wp--preset--font-size--medium) !important;
+		}
+
+		.has-large-font-size {
+			font-size: var(--wp--preset--font-size--large) !important;
+		}
+
+		.has-x-large-font-size {
+			font-size: var(--wp--preset--font-size--x-large) !important;
+		}
+
+		:where(.wp-block-post-template.is-layout-flex) {
+			gap: 1.25em;
+		}
+
+		:where(.wp-block-post-template.is-layout-grid) {
+			gap: 1.25em;
+		}
+
+		:where(.wp-block-columns.is-layout-flex) {
+			gap: 2em;
+		}
+
+		:where(.wp-block-columns.is-layout-grid) {
+			gap: 2em;
+		}
+
+		:root :where(.wp-block-pullquote) {
+			font-size: 1.5em;
+			line-height: 1.6;
+		}
+	</style>
+	<link rel='stylesheet' id='canvas-block-heading-style-css'
+		href='https://websecuritylab.org/wp-content/plugins/canvas/components/content-formatting/block-heading/block.css?ver=1734334210'
+		media='all' />
+	<link rel='stylesheet' id='canvas-block-list-style-css'
+		href='https://websecuritylab.org/wp-content/plugins/canvas/components/content-formatting/block-list/block.css?ver=1734334210'
+		media='all' />
+	<link rel='stylesheet' id='canvas-block-paragraph-style-css'
+		href='https://websecuritylab.org/wp-content/plugins/canvas/components/content-formatting/block-paragraph/block.css?ver=1734334210'
+		media='all' />
+	<link rel='stylesheet' id='canvas-block-separator-style-css'
+		href='https://websecuritylab.org/wp-content/plugins/canvas/components/content-formatting/block-separator/block.css?ver=1734334210'
+		media='all' />
+	<link rel='stylesheet' id='canvas-block-group-style-css'
+		href='https://websecuritylab.org/wp-content/plugins/canvas/components/basic-elements/block-group/block.css?ver=1734334210'
+		media='all' />
+	<link rel='stylesheet' id='canvas-block-cover-style-css'
+		href='https://websecuritylab.org/wp-content/plugins/canvas/components/basic-elements/block-cover/block.css?ver=1734334210'
+		media='all' />
+	<link rel='stylesheet' id='powerkit-author-box-css'
+		href='https://websecuritylab.org/wp-content/plugins/powerkit/modules/author-box/public/css/public-powerkit-author-box.css?ver=2.9.6'
+		media='all' />
+	<link rel='stylesheet' id='powerkit-basic-elements-css'
+		href='https://websecuritylab.org/wp-content/plugins/powerkit/modules/basic-elements/public/css/public-powerkit-basic-elements.css?ver=2.9.6'
+		media='screen' />
+	<link rel='stylesheet' id='powerkit-coming-soon-css'
+		href='https://websecuritylab.org/wp-content/plugins/powerkit/modules/coming-soon/public/css/public-powerkit-coming-soon.css?ver=2.9.6'
+		media='all' />
+	<link rel='stylesheet' id='powerkit-content-formatting-css'
+		href='https://websecuritylab.org/wp-content/plugins/powerkit/modules/content-formatting/public/css/public-powerkit-content-formatting.css?ver=2.9.6'
+		media='all' />
+	<link rel='stylesheet' id='powerkit-сontributors-css'
+		href='https://websecuritylab.org/wp-content/plugins/powerkit/modules/contributors/public/css/public-powerkit-contributors.css?ver=2.9.6'
+		media='all' />
+	<link rel='stylesheet' id='powerkit-featured-categories-css'
+		href='https://websecuritylab.org/wp-content/plugins/powerkit/modules/featured-categories/public/css/public-powerkit-featured-categories.css?ver=2.9.6'
+		media='all' />
+	<link rel='stylesheet' id='powerkit-inline-posts-css'
+		href='https://websecuritylab.org/wp-content/plugins/powerkit/modules/inline-posts/public/css/public-powerkit-inline-posts.css?ver=2.9.6'
+		media='all' />
+	<link rel='stylesheet' id='powerkit-justified-gallery-css'
+		href='https://websecuritylab.org/wp-content/plugins/powerkit/modules/justified-gallery/public/css/public-powerkit-justified-gallery.css?ver=2.9.6'
+		media='all' />
+	<link rel='stylesheet' id='glightbox-css'
+		href='https://websecuritylab.org/wp-content/plugins/powerkit/modules/lightbox/public/css/glightbox.min.css?ver=2.9.6'
+		media='all' />
+	<link rel='stylesheet' id='powerkit-lightbox-css'
+		href='https://websecuritylab.org/wp-content/plugins/powerkit/modules/lightbox/public/css/public-powerkit-lightbox.css?ver=2.9.6'
+		media='all' />
+	<link rel='stylesheet' id='powerkit-opt-in-forms-css'
+		href='https://websecuritylab.org/wp-content/plugins/powerkit/modules/opt-in-forms/public/css/public-powerkit-opt-in-forms.css?ver=2.9.6'
+		media='all' />
+	<link rel='stylesheet' id='powerkit-widget-posts-css'
+		href='https://websecuritylab.org/wp-content/plugins/powerkit/modules/posts/public/css/public-powerkit-widget-posts.css?ver=2.9.6'
+		media='all' />
+	<link rel='stylesheet' id='powerkit-share-buttons-css'
+		href='https://websecuritylab.org/wp-content/plugins/powerkit/modules/share-buttons/public/css/public-powerkit-share-buttons.css?ver=2.9.6'
+		media='all' />
+	<link rel='stylesheet' id='powerkit-slider-gallery-css'
+		href='https://websecuritylab.org/wp-content/plugins/powerkit/modules/slider-gallery/public/css/public-powerkit-slider-gallery.css?ver=2.9.6'
+		media='all' />
+	<link rel='stylesheet' id='powerkit-social-links-css'
+		href='https://websecuritylab.org/wp-content/plugins/powerkit/modules/social-links/public/css/public-powerkit-social-links.css?ver=2.9.6'
+		media='all' />
+	<link rel='stylesheet' id='powerkit-table-of-contents-css'
+		href='https://websecuritylab.org/wp-content/plugins/powerkit/modules/table-of-contents/public/css/public-powerkit-table-of-contents.css?ver=2.9.6'
+		media='all' />
+	<link rel='stylesheet' id='powerkit-widget-about-css'
+		href='https://websecuritylab.org/wp-content/plugins/powerkit/modules/widget-about/public/css/public-powerkit-widget-about.css?ver=2.9.6'
+		media='all' />
+	<style id='wpxpo-global-style-inline-css'>
+		:root {
+			--preset-color1: #037fff --preset-color2: #026fe0 --preset-color3: #071323 --preset-color4: #132133 --preset-color5: #34495e --preset-color6: #787676 --preset-color7: #f0f2f3 --preset-color8: #f8f9fa --preset-color9: #ffffff
+		}
+	</style>
+	<style id='ultp-preset-colors-style-inline-css'>
+		:root {
+			--postx_preset_Base_1_color: #f4f4ff;
+			--postx_preset_Base_2_color: #dddff8;
+			--postx_preset_Base_3_color: #B4B4D6;
+			--postx_preset_Primary_color: #3323f0;
+			--postx_preset_Secondary_color: #4a5fff;
+			--postx_preset_Tertiary_color: #FFFFFF;
+			--postx_preset_Contrast_3_color: #545472;
+			--postx_preset_Contrast_2_color: #262657;
+			--postx_preset_Contrast_1_color: #10102e;
+			--postx_preset_Over_Primary_color: #ffffff;
+		}
+	</style>
+	<style id='ultp-preset-gradient-style-inline-css'>
+		:root {
+			--postx_preset_Primary_to_Secondary_to_Right_gradient: linear-gradient(90deg, var(--postx_preset_Primary_color) 0%, var(--postx_preset_Secondary_color) 100%);
+			--postx_preset_Primary_to_Secondary_to_Bottom_gradient: linear-gradient(180deg, var(--postx_preset_Primary_color) 0%, var(--postx_preset_Secondary_color) 100%);
+			--postx_preset_Secondary_to_Primary_to_Right_gradient: linear-gradient(90deg, var(--postx_preset_Secondary_color) 0%, var(--postx_preset_Primary_color) 100%);
+			--postx_preset_Secondary_to_Primary_to_Bottom_gradient: linear-gradient(180deg, var(--postx_preset_Secondary_color) 0%, var(--postx_preset_Primary_color) 100%);
+			--postx_preset_Cold_Evening_gradient: linear-gradient(0deg, rgb(12, 52, 131) 0%, rgb(162, 182, 223) 100%, rgb(107, 140, 206) 100%, rgb(162, 182, 223) 100%);
+			--postx_preset_Purple_Division_gradient: linear-gradient(0deg, rgb(112, 40, 228) 0%, rgb(229, 178, 202) 100%);
+			--postx_preset_Over_Sun_gradient: linear-gradient(60deg, rgb(171, 236, 214) 0%, rgb(251, 237, 150) 100%);
+			--postx_preset_Morning_Salad_gradient: linear-gradient(-255deg, rgb(183, 248, 219) 0%, rgb(80, 167, 194) 100%);
+			--postx_preset_Fabled_Sunset_gradient: linear-gradient(-270deg, rgb(35, 21, 87) 0%, rgb(68, 16, 122) 29%, rgb(255, 19, 97) 67%, rgb(255, 248, 0) 100%);
+		}
+	</style>
+	<style id='ultp-preset-typo-style-inline-css'>
+		@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+
+		:root {
+			--postx_preset_Heading_typo_font_family: Roboto;
+			--postx_preset_Heading_typo_font_family_type: sans-serif;
+			--postx_preset_Heading_typo_font_weight: 600;
+			--postx_preset_Heading_typo_text_transform: capitalize;
+			--postx_preset_Body_and_Others_typo_font_family: Roboto;
+			--postx_preset_Body_and_Others_typo_font_family_type: sans-serif;
+			--postx_preset_Body_and_Others_typo_font_weight: 400;
+			--postx_preset_Body_and_Others_typo_text_transform: lowercase;
+			--postx_preset_body_typo_font_size_lg: 16px;
+			--postx_preset_paragraph_1_typo_font_size_lg: 12px;
+			--postx_preset_paragraph_2_typo_font_size_lg: 12px;
+			--postx_preset_paragraph_3_typo_font_size_lg: 12px;
+			--postx_preset_heading_h1_typo_font_size_lg: 42px;
+			--postx_preset_heading_h2_typo_font_size_lg: 36px;
+			--postx_preset_heading_h3_typo_font_size_lg: 30px;
+			--postx_preset_heading_h4_typo_font_size_lg: 24px;
+			--postx_preset_heading_h5_typo_font_size_lg: 20px;
+			--postx_preset_heading_h6_typo_font_size_lg: 16px;
+		}
+	</style>
+	<style id='kadence-blocks-global-variables-inline-css'>
+		:root {
+			--global-kb-font-size-sm: clamp(0.8rem, 0.73rem + 0.217vw, 0.9rem);
+			--global-kb-font-size-md: clamp(1.1rem, 0.995rem + 0.326vw, 1.25rem);
+			--global-kb-font-size-lg: clamp(1.75rem, 1.576rem + 0.543vw, 2rem);
+			--global-kb-font-size-xl: clamp(2.25rem, 1.728rem + 1.63vw, 3rem);
+			--global-kb-font-size-xxl: clamp(2.5rem, 1.456rem + 3.26vw, 4rem);
+			--global-kb-font-size-xxxl: clamp(2.75rem, 0.489rem + 7.065vw, 6rem);
+		}
+
+		:root {
+			--global-palette1: #3182CE;
+			--global-palette2: #2B6CB0;
+			--global-palette3: #1A202C;
+			--global-palette4: #2D3748;
+			--global-palette5: #4A5568;
+			--global-palette6: #718096;
+			--global-palette7: #EDF2F7;
+			--global-palette8: #F7FAFC;
+			--global-palette9: #ffffff;
+		}
+	</style>
+	<link rel='stylesheet' id='csco-styles-css'
+		href='https://websecuritylab.org/wp-content/themes/swyft/style.css?ver=1.0.4' media='all' />
+	<link rel='stylesheet' id='7847e1752b9da7e3a57fff514218ff68-css'
+		href='https://fonts.googleapis.com/css?family=Manrope%3A400%2C500%2C700%2C600&#038;subset=latin%2Clatin-ext%2Ccyrillic%2Ccyrillic-ext%2Cvietnamese&#038;display=swap&#038;ver=1.0.4'
+		media='all' />
+	<link rel='stylesheet' id='85a1fa994cbcdfba6a11d440159729f4-css'
+		href='https://fonts.googleapis.com/css?family=DM+Sans%3A700%2C400%2C400i%2C500%2C500i%2C700i&#038;subset=latin%2Clatin-ext%2Ccyrillic%2Ccyrillic-ext%2Cvietnamese&#038;display=swap&#038;ver=1.0.4'
+		media='all' />
+	<link rel='stylesheet' id='66f4dfe2697ef0caed80135bdfa795f1-css'
+		href='https://fonts.googleapis.com/css?family=Epilogue%3A600%2C400%2C400i%2C500%2C500i%2C700%2C700i&#038;subset=latin%2Clatin-ext%2Ccyrillic%2Ccyrillic-ext%2Cvietnamese&#038;display=swap&#038;ver=1.0.4'
+		media='all' />
+	<style id='cs-customizer-output-styles-inline-css'>
+		:root {
+			--cs-light-site-background: #FFFFFF;
+			--cs-dark-site-background: #1c1c1c;
+			--cs-light-layout-background: #f1f1f2;
+			--cs-dark-layout-background: #232323;
+			--cs-light-primary-color: #1D1D1F;
+			--cs-dark-primary-color: #FFFFFF;
+			--cs-light-secondary-color: #616162;
+			--cs-dark-secondary-color: #CDCBCA;
+			--cs-light-accent-color: #634ffb;
+			--cs-dark-accent-color: #634ffb;
+			--cs-light-button-hover-background: #634ffb;
+			--cs-dark-button-hover-background: #634ffb;
+			--cs-light-button-hover-color: #FFFFFF;
+			--cs-dark-button-hover-color: #FFFFFF;
+			--cs-light-button-background: #1D1D1F;
+			--cs-dark-button-background: #3e3e3e;
+			--cs-light-button-color: #FFFFFF;
+			--cs-dark-button-color: #FFFFFF;
+			--cs-light-secondary-button-background: #EDEDED;
+			--cs-dark-secondary-button-background: #3e3e3e;
+			--cs-light-secondary-button-color: #1D1D1F;
+			--cs-dark-secondary-button-color: #FFFFFF;
+			--cs-light-border-color: #E4E4E4;
+			--cs-dark-border-color: #343434;
+			--cs-light-divider-color: #1D1D1F;
+			--cs-dark-divider-color: #494949;
+			--cs-layout-elements-border-radius: 0px;
+			--cs-thumbnail-border-radius: 0px;
+			--cs-button-border-radius: 0px;
+			--cs-heading-1-font-size: 3.5rem;
+			--cs-heading-2-font-size: 3rem;
+			--cs-heading-3-font-size: 2.5rem;
+			--cs-heading-4-font-size: 2rem;
+			--cs-heading-5-font-size: 1.625rem;
+			--cs-heading-6-font-size: 1.5rem;
+			--cs-header-initial-height: 80px;
+			--cs-header-height: 80px;
+			--cs-header-border-width: 1px;
+		}
+
+		:root,
+		[data-scheme="light"] {
+			--cs-light-overlay-background-rgb: 0, 0, 0;
+		}
+
+		:root,
+		[data-scheme="dark"] {
+			--cs-dark-overlay-background-rgb: 0, 0, 0;
+		}
+
+		.cs-posts-area__home {
+			--cs-posts-area-grid-row-gap: 96px;
+			--cs-entry-title-font-size: 1.625rem;
+		}
+
+		.cs-posts-area__archive {
+			--cs-posts-area-grid-row-gap: 96px;
+			--cs-entry-title-font-size: 1.625rem;
+		}
+
+		.cs-read-next .cs-posts-area__read-next {
+			--cs-posts-area-grid-row-gap: 96px;
+		}
+
+		.cs-posts-area__read-next {
+			--cs-entry-title-font-size: 1.625rem;
+		}
+
+		@media (max-width: 1199.98px) {
+			.cs-posts-area__home {
+				--cs-posts-area-grid-row-gap: 48px;
+				--cs-entry-title-font-size: 1.625rem;
+			}
+
+			.cs-posts-area__archive {
+				--cs-posts-area-grid-row-gap: 48px;
+				--cs-entry-title-font-size: 1.625rem;
+			}
+
+			.cs-read-next .cs-posts-area__read-next {
+				--cs-posts-area-grid-row-gap: 48px;
+			}
+
+			.cs-posts-area__read-next {
+				--cs-entry-title-font-size: 1.625rem;
+			}
+		}
+
+		@media (max-width: 991.98px) {
+			.cs-posts-area__home {
+				--cs-posts-area-grid-row-gap: 40px;
+				--cs-entry-title-font-size: 1.5rem;
+			}
+
+			.cs-posts-area__archive {
+				--cs-posts-area-grid-row-gap: 40px;
+				--cs-entry-title-font-size: 1.5rem;
+			}
+
+			.cs-read-next .cs-posts-area__read-next {
+				--cs-posts-area-grid-row-gap: 40px;
+			}
+
+			.cs-posts-area__read-next {
+				--cs-entry-title-font-size: 1.5rem;
+			}
+		}
+
+		@media (max-width: 575.98px) {
+			.cs-posts-area__home {
+				--cs-posts-area-grid-row-gap: 40px;
+				--cs-entry-title-font-size: 1.5rem;
+			}
+
+			.cs-posts-area__archive {
+				--cs-posts-area-grid-row-gap: 40px;
+				--cs-entry-title-font-size: 1.5rem;
+			}
+
+			.cs-read-next .cs-posts-area__read-next {
+				--cs-posts-area-grid-row-gap: 40px;
+			}
+
+			.cs-posts-area__read-next {
+				--cs-entry-title-font-size: 1.5rem;
+			}
+		}
+	</style>
+	<script type="rocketlazyloadscript"
+		data-rocket-src="https://websecuritylab.org/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"
+		defer></script>
+	<script type="rocketlazyloadscript"
+		data-rocket-src="https://websecuritylab.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"
+		id="jquery-migrate-js" defer></script>
+	<script type="rocketlazyloadscript"
+		data-rocket-src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?ver=6.7.2" id="csco_adsense-js" defer>
+	</script>
+
+	<!-- Google tag (gtag.js) snippet added by Site Kit -->
+
+	<!-- Google Analytics snippet added by Site Kit -->
+	<script type="rocketlazyloadscript" data-rocket-src="https://www.googletagmanager.com/gtag/js?id=GT-NBJ4RBVC"
+		id="google_gtagjs-js" async></script>
+	<script type="rocketlazyloadscript" id="google_gtagjs-js-after">
+		window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["websecuritylab.org"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-NBJ4RBVC");
+</script>
+
+	<!-- End Google tag (gtag.js) snippet added by Site Kit -->
+
+	<style type="text/css" media="all" id="canvas-blocks-dynamic-styles">
+
+	</style>
+	<meta name="generator" content="Site Kit by Google 1.144.0" />
+
+	<!-- This site is optimized with the Schema plugin v1.7.9.6 - https://schema.press -->
+	<script type="application/ld+json">
+		{"@context":"https:\/\/schema.org\/","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/websecuritylab.org\/how-safe-is-public-wi-fi-a-network-engineer-explains\/"},"url":"https:\/\/websecuritylab.org\/how-safe-is-public-wi-fi-a-network-engineer-explains\/","headline":"How Safe is Public Wi-Fi? A Network Engineer Explains","datePublished":"2025-04-07T10:47:19+00:00","dateModified":"2025-04-07T10:47:21+00:00","publisher":{"@type":"Organization","@id":"https:\/\/websecuritylab.org\/#organization","name":"Web Security Lab","logo":{"@type":"ImageObject","url":"https:\/\/websecuritylab.org\/wp-content\/uploads\/2024\/05\/WebSecLabBlack@2x.png","width":600,"height":60}},"image":{"@type":"ImageObject","url":"https:\/\/websecuritylab.org\/wp-content\/uploads\/2025\/04\/Wifi.png","width":1920,"height":1080},"articleSection":"Networking","keywords":"Latest","description":"Public Wi-Fi is a modern convenience, but it comes with certain security risks. While it offers easy internet access in coffee shops, airports, and hotels, these networks are prime targets for cybercriminals. The question remains: Are the dangers of public Wi-Fi overstated, or are they real threats that demand","author":{"@type":"Person","name":"Chidiadi Anyanwu","url":"https:\/\/websecuritylab.org\/author\/chidiadi-anyanwu\/","description":"Chidiadi is a technical writer passionate about Cloud &amp; DevOps with a background in network engineering. \r\n\r\nHe loves to break down complex technical concepts for easy understanding.","image":{"@type":"ImageObject","url":"https:\/\/websecuritylab.org\/wp-content\/uploads\/2025\/04\/feda1fb0-f812-4a24-9de1-65e69b65be1f.jpeg","height":96,"width":96}}}
+	</script>
+
+	<style id='cs-theme-typography'>
+		:root {
+			/* Base Font */
+			--cs-font-base-family: Manrope;
+			--cs-font-base-size: 1rem;
+			--cs-font-base-weight: 400;
+			--cs-font-base-style: normal;
+			--cs-font-base-letter-spacing: normal;
+			--cs-font-base-line-height: 1.5;
+
+			/* Primary Font */
+			--cs-font-primary-family: DM Sans;
+			--cs-font-primary-size: 0.8125rem;
+			--cs-font-primary-weight: 700;
+			--cs-font-primary-style: normal;
+			--cs-font-primary-letter-spacing: 0.08em;
+			--cs-font-primary-text-transform: uppercase;
+			--cs-font-primary-line-height: 1.2;
+
+			/* Secondary Font */
+			--cs-font-secondary-family: Manrope;
+			--cs-font-secondary-size: 0.8125rem;
+			--cs-font-secondary-weight: 600;
+			--cs-font-secondary-style: normal;
+			--cs-font-secondary-letter-spacing: -0.01em;
+			--cs-font-secondary-text-transform: none;
+			--cs-font-secondary-line-height: 1.2;
+
+			/* Post Title Font Size */
+			--cs-font-post-title-family: Epilogue;
+			--cs-font-post-title-weight: 600;
+			--cs-font-post-title-size: 3.5rem;
+			--cs-font-post-title-letter-spacing: -0.02em;
+			--cs-font-post-title-line-height: 1.12;
+
+			/* Post Subbtitle */
+			--cs-font-post-subtitle-family: Manrope;
+			--cs-font-post-subtitle-weight: 500;
+			--cs-font-post-subtitle-size: 1.25rem;
+			--cs-font-post-subtitle-letter-spacing: -0.01em;
+			--cs-font-post-subtitle-line-height: 1.4;
+
+			/* Post Category Font */
+			--cs-font-category-family: Manrope;
+			--cs-font-category-size: 0.9375rem;
+			--cs-font-category-weight: 600;
+			--cs-font-category-style: normal;
+			--cs-font-category-letter-spacing: -0.01em;
+			--cs-font-category-text-transform: none;
+			--cs-font-category-line-height: 1.2;
+
+			/* Post Meta Font */
+			--cs-font-post-meta-family: Manrope;
+			--cs-font-post-meta-size: 1rem;
+			--cs-font-post-meta-weight: 700;
+			--cs-font-post-meta-style: normal;
+			--cs-font-post-meta-letter-spacing: -0.01em;
+			--cs-font-post-meta-text-transform: none;
+			--cs-font-post-meta-line-height: 1.2;
+
+			/* Post Content */
+			--cs-font-post-content-family: Manrope;
+			--cs-font-post-content-weight: 500;
+			--cs-font-post-content-size: 1.25rem;
+			--cs-font-post-content-letter-spacing: -0.01em;
+			--cs-font-post-content-line-height: 1.5;
+
+			/* Input Font */
+			--cs-font-input-family: Manrope;
+			--cs-font-input-size: 1rem;
+			--cs-font-input-weight: 500;
+			--cs-font-input-style: normal;
+			--cs-font-input-line-height: 1.4rem;
+			--cs-font-input-letter-spacing: -0.025em;
+			--cs-font-input-text-transform: none;
+
+			/* Entry Title Font Size */
+			--cs-font-entry-title-family: Epilogue;
+			--cs-font-entry-title-weight: 600;
+			--cs-font-entry-title-letter-spacing: -0.01em;
+			--cs-font-entry-title-line-height: 1.2;
+
+			/* Entry Excerpt */
+			--cs-font-entry-excerpt-family: Manrope;
+			--cs-font-entry-excerpt-weight: 500;
+			--cs-font-entry-excerpt-size: 1.125rem;
+			--cs-font-entry-excerpt-letter-spacing: -0.01em;
+			--cs-font-entry-excerpt-line-height: 1.4;
+
+			/* Logos --------------- */
+
+			/* Main Logo */
+			--cs-font-main-logo-family: Inter;
+			--cs-font-main-logo-size: 1.375rem;
+			--cs-font-main-logo-weight: 700;
+			--cs-font-main-logo-style: normal;
+			--cs-font-main-logo-letter-spacing: -0.04em;
+			--cs-font-main-logo-text-transform: none;
+
+			/* Footer Logo */
+			--cs-font-footer-logo-family: Inter;
+			--cs-font-footer-logo-size: 1.375rem;
+			--cs-font-footer-logo-weight: 700;
+			--cs-font-footer-logo-style: normal;
+			--cs-font-footer-logo-letter-spacing: -0.04em;
+			--cs-font-footer-logo-text-transform: none;
+
+			/* Headings --------------- */
+
+			/* Headings */
+			--cs-font-headings-family: Epilogue;
+			--cs-font-headings-weight: 600;
+			--cs-font-headings-style: normal;
+			--cs-font-headings-line-height: 1.12;
+			--cs-font-headings-letter-spacing: -0.02em;
+			--cs-font-headings-text-transform: none;
+
+			/* Menu Font --------------- */
+
+			/* Menu */
+			/* Used for main top level menu elements. */
+			--cs-font-menu-family: Manrope;
+			--cs-font-menu-size: 1rem;
+			--cs-font-menu-weight: 600;
+			--cs-font-menu-style: normal;
+			--cs-font-menu-letter-spacing: -0.03125em;
+			--cs-font-menu-text-transform: none;
+			--cs-font-menu-line-height: 1.2;
+
+			/* Submenu Font */
+			/* Used for submenu elements. */
+			--cs-font-submenu-family: Manrope;
+			--cs-font-submenu-size: 1rem;
+			--cs-font-submenu-weight: 600;
+			--cs-font-submenu-style: normal;
+			--cs-font-submenu-letter-spacing: -0.03125em;
+			--cs-font-submenu-text-transform: none;
+			--cs-font-submenu-line-height: 1.2;
+
+			/* Footer Menu */
+			--cs-font-footer-menu-family: Manrope;
+			--cs-font-footer-menu-size: 1rem;
+			--cs-font-footer-menu-weight: 600;
+			--cs-font-footer-menu-style: normal;
+			--cs-font-footer-menu-letter-spacing: -0.03125em;
+			--cs-font-footer-menu-text-transform: none;
+			--cs-font-footer-menu-line-height: 1.2;
+
+			/* Footer Submenu Font */
+			--cs-font-footer-submenu-family: Manrope;
+			--cs-font-footer-submenu-size: 1rem;
+			--cs-font-footer-submenu-weight: 600;
+			--cs-font-footer-submenu-style: normal;
+			--cs-font-footer-submenu-letter-spacing: -0.03125em;
+			--cs-font-footer-submenu-text-transform: none;
+			--cs-font-footer-submenu-line-height: 1.2;
+		}
+	</style>
+	<link rel="icon" href="https://websecuritylab.org/wp-content/uploads/2024/09/cropped-WebSecLab-Square-32x32.png"
+		sizes="32x32" />
+	<link rel="icon" href="https://websecuritylab.org/wp-content/uploads/2024/09/cropped-WebSecLab-Square-192x192.png"
+		sizes="192x192" />
+	<link rel="apple-touch-icon"
+		href="https://websecuritylab.org/wp-content/uploads/2024/09/cropped-WebSecLab-Square-180x180.png" />
+	<meta name="msapplication-TileImage"
+		content="https://websecuritylab.org/wp-content/uploads/2024/09/cropped-WebSecLab-Square-270x270.png" />
+	<style id="wpforms-css-vars-root">
+		:root {
+			--wpforms-field-border-radius: 3px;
+			--wpforms-field-border-style: solid;
+			--wpforms-field-border-size: 1px;
+			--wpforms-field-background-color: #ffffff;
+			--wpforms-field-border-color: rgba(0, 0, 0, 0.25);
+			--wpforms-field-border-color-spare: rgba(0, 0, 0, 0.25);
+			--wpforms-field-text-color: rgba(0, 0, 0, 0.7);
+			--wpforms-field-menu-color: #ffffff;
+			--wpforms-label-color: rgba(0, 0, 0, 0.85);
+			--wpforms-label-sublabel-color: rgba(0, 0, 0, 0.55);
+			--wpforms-label-error-color: #d63637;
+			--wpforms-button-border-radius: 3px;
+			--wpforms-button-border-style: none;
+			--wpforms-button-border-size: 1px;
+			--wpforms-button-background-color: #066aab;
+			--wpforms-button-border-color: #066aab;
+			--wpforms-button-text-color: #ffffff;
+			--wpforms-page-break-color: #066aab;
+			--wpforms-background-image: none;
+			--wpforms-background-position: center center;
+			--wpforms-background-repeat: no-repeat;
+			--wpforms-background-size: cover;
+			--wpforms-background-width: 100px;
+			--wpforms-background-height: 100px;
+			--wpforms-background-color: rgba(0, 0, 0, 0);
+			--wpforms-background-url: none;
+			--wpforms-container-padding: 0px;
+			--wpforms-container-border-style: none;
+			--wpforms-container-border-width: 1px;
+			--wpforms-container-border-color: #000000;
+			--wpforms-container-border-radius: 3px;
+			--wpforms-field-size-input-height: 43px;
+			--wpforms-field-size-input-spacing: 15px;
+			--wpforms-field-size-font-size: 16px;
+			--wpforms-field-size-line-height: 19px;
+			--wpforms-field-size-padding-h: 14px;
+			--wpforms-field-size-checkbox-size: 16px;
+			--wpforms-field-size-sublabel-spacing: 5px;
+			--wpforms-field-size-icon-size: 1;
+			--wpforms-label-size-font-size: 16px;
+			--wpforms-label-size-line-height: 19px;
+			--wpforms-label-size-sublabel-font-size: 14px;
+			--wpforms-label-size-sublabel-line-height: 17px;
+			--wpforms-button-size-font-size: 17px;
+			--wpforms-button-size-height: 41px;
+			--wpforms-button-size-padding-h: 15px;
+			--wpforms-button-size-margin-top: 10px;
+			--wpforms-container-shadow-size-box-shadow: none;
+
+		}
+	</style>
+	<style id="wpr-lazyload-bg-container"></style>
+	<style id="wpr-lazyload-bg-exclusion"></style>
+	<noscript>
+		<style id="wpr-lazyload-bg-nostyle"></style>
+	</noscript>
+	<script type="application/javascript">
+		const rocket_pairs = []; const rocket_excluded_pairs = [];
+	</script>
+</head>
+
+<body
+	class="post-template-default single single-post postid-3503 single-format-standard wp-embed-responsive postx-page cs-page-layout-right cs-navbar-smart-enabled cs-sticky-sidebar-enabled cs-stick-last cs-display-header-overlay"
+	data-scheme='dark'>
+
+
+
+	<div class="cs-site-overlay"></div>
+
+	<div class="cs-offcanvas">
+		<div class="cs-offcanvas__header">
+
+			<div class="cs-logo">
+				<a class="cs-header__logo cs-logo-default " href="https://websecuritylab.org/">
+					<img src="https://websecuritylab.org/wp-content/uploads/2024/09/WSLBlk@2x.png"  alt="Web Security Lab"  width="213.82289416847"  height="60" >			</a>
+
+					<a class="cs-header__logo cs-logo-dark " href="https://websecuritylab.org/">
+						<img src="https://websecuritylab.org/wp-content/uploads/2024/09/WhiteTestRun@2x.png"  alt="Web Security Lab"  width="213.82289416847"  height="60" >						</a>
+			</div>
+
+			<nav class="cs-offcanvas__nav">
+				<span class="cs-offcanvas__toggle" role="button" aria-label="Close mobile menu button"><i class="cs-icon cs-icon-x"></i></span>
+			</nav>
+
+		</div>
+		<aside class="cs-offcanvas__sidebar">
+			<div class="cs-offcanvas__inner cs-offcanvas__area cs-widget-area">
+				<div class="widget widget_nav_menu">
+					<div class="menu-primary-container">
+						<ul id="menu-primary" class="menu">
+							<li id="menu-item-2925"
+								class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-has-children menu-item-2925">
+								<a href="https://websecuritylab.org/tag/latest/">News</a>
+								<ul class="sub-menu">
+									<li id="menu-item-3216"
+										class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3216">
+										<a href="https://websecuritylab.org/topics/cybercrime/">Cybercrime</a></li>
+									<li id="menu-item-3337"
+										class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3337">
+										<a href="https://websecuritylab.org/topics/reports/">Reports</a></li>
+									<li id="menu-item-3281"
+										class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3281">
+										<a href="https://websecuritylab.org/topics/data-breaches/">Data Breaches</a>
+									</li>
+								</ul>
+							</li>
+							<li id="menu-item-2919"
+								class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-has-children menu-item-2919">
+								<a href="https://websecuritylab.org/tag/tutorials/">Tutorials</a>
+								<ul class="sub-menu">
+									<li id="menu-item-2912"
+										class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-2912">
+										<a href="https://websecuritylab.org/topics/networking/">Networking</a></li>
+									<li id="menu-item-2915"
+										class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2915">
+										<a href="https://websecuritylab.org/topics/ethical-hacking/">Ethical Hacking</a>
+									</li>
+									<li id="menu-item-2913"
+										class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-2913">
+										<a href="https://websecuritylab.org/topics/operating-systems/">Operating
+											Systems</a>
+										<ul class="sub-menu">
+											<li id="menu-item-3002"
+												class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3002">
+												<a
+													href="https://websecuritylab.org/topics/operating-systems/windows/">Windows</a>
+											</li>
+											<li id="menu-item-3003"
+												class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3003">
+												<a
+													href="https://websecuritylab.org/topics/operating-systems/linux/">Linux</a>
+											</li>
+										</ul>
+									</li>
+									<li id="menu-item-2916"
+										class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2916">
+										<a href="https://websecuritylab.org/topics/security-solutions/">Security
+											Solutions</a></li>
+								</ul>
+							</li>
+							<li id="menu-item-2917"
+								class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2917"><a
+									href="https://websecuritylab.org/topics/threats-vulnerabilities/">Threats &amp;
+									Vulnerabilities</a></li>
+							<li id="menu-item-2914"
+								class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2914"><a
+									href="https://websecuritylab.org/topics/data-protection/">Data Protection</a></li>
+							<li id="menu-item-3280"
+								class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3280"><a
+									href="https://websecuritylab.org/topics/opinion/">Opinion</a></li>
+							<li id="menu-item-2385"
+								class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2385"><a
+									href="https://websecuritylab.org/topics/resources/">Resources</a></li>
+						</ul>
+					</div>
+				</div>
+
+
+				<div class="cs-offcanvas__bottombar">
+					<div class="cs-social">
+						<a class="cs-social__link" href="/websecuritylab" target="_blank">
+							<img width="64" height="64" src="https://websecuritylab.org/wp-content/uploads/2024/03/demo-6-icon-twitter-new-0001@2x-1.webp"  alt="Twitter" >				</a>
+					</div>
+					<span class="cs-site-scheme-toggle cs-offcanvas__scheme-toggle" role="button" aria-label="Scheme Toggle">
+				<span class="cs-header__scheme-toggle-icons">
+					<i class="cs-header__scheme-toggle-icon cs-icon cs-icon-light-mode"></i>
+					<i class="cs-header__scheme-toggle-icon cs-icon cs-icon-dark-mode"></i>
+				</span>
+					</span>
+				</div>
+			</div>
+		</aside>
+	</div>
+
+	<div id="page" class="cs-site">
+
+
+		<div class="cs-site-inner">
+
+
+
+			<div class="cs-header-before"></div>
+
+			<header class="cs-header cs-header-stretch">
+				<div class="cs-container">
+					<div class="cs-header__inner cs-header__inner-desktop">
+						<div class="cs-header__col cs-col-left">
+							<div class="cs-logo">
+								<a class="cs-header__logo cs-logo-default " href="https://websecuritylab.org/">
+									<img src="https://websecuritylab.org/wp-content/uploads/2024/09/WSLBlk@2x.png"  alt="Web Security Lab"  width="213.82289416847"  height="60" >			</a>
+
+									<a class="cs-header__logo cs-logo-dark " href="https://websecuritylab.org/">
+										<img src="https://websecuritylab.org/wp-content/uploads/2024/09/WhiteTestRun@2x.png"  alt="Web Security Lab"  width="213.82289416847"  height="60" >						</a>
+							</div>
+						</div>
+
+						<div class="cs-header__col cs-col-center">
+							<nav class="cs-header__nav">
+								<ul id="menu-primary-1" class="cs-header__nav-inner">
+									<li
+										class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-has-children menu-item-2925">
+										<a
+											href="https://websecuritylab.org/tag/latest/"><span><span>News</span></span></a>
+										<ul class="sub-menu">
+											<li
+												class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3216">
+												<a
+													href="https://websecuritylab.org/topics/cybercrime/"><span>Cybercrime</span></a>
+											</li>
+											<li
+												class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3337">
+												<a
+													href="https://websecuritylab.org/topics/reports/"><span>Reports</span></a>
+											</li>
+											<li
+												class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3281">
+												<a
+													href="https://websecuritylab.org/topics/data-breaches/"><span>Data Breaches</span></a>
+											</li>
+										</ul>
+									</li>
+									<li
+										class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-has-children menu-item-2919">
+										<a
+											href="https://websecuritylab.org/tag/tutorials/"><span><span>Tutorials</span></span></a>
+										<ul class="sub-menu">
+											<li
+												class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-2912">
+												<a
+													href="https://websecuritylab.org/topics/networking/"><span>Networking</span></a>
+											</li>
+											<li
+												class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2915">
+												<a
+													href="https://websecuritylab.org/topics/ethical-hacking/"><span>Ethical Hacking</span></a>
+											</li>
+											<li
+												class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-2913">
+												<a
+													href="https://websecuritylab.org/topics/operating-systems/"><span>Operating Systems</span></a>
+												<ul class="sub-menu">
+													<li
+														class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3002">
+														<a
+															href="https://websecuritylab.org/topics/operating-systems/windows/"><span>Windows</span></a>
+													</li>
+													<li
+														class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3003">
+														<a
+															href="https://websecuritylab.org/topics/operating-systems/linux/"><span>Linux</span></a>
+													</li>
+												</ul>
+											</li>
+											<li
+												class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2916">
+												<a
+													href="https://websecuritylab.org/topics/security-solutions/"><span>Security Solutions</span></a>
+											</li>
+										</ul>
+									</li>
+									<li
+										class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2917">
+										<a
+											href="https://websecuritylab.org/topics/threats-vulnerabilities/"><span><span>Threats &amp; Vulnerabilities</span></span></a>
+									</li>
+									<li
+										class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2914">
+										<a
+											href="https://websecuritylab.org/topics/data-protection/"><span><span>Data Protection</span></span></a>
+									</li>
+									<li
+										class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3280">
+										<a
+											href="https://websecuritylab.org/topics/opinion/"><span><span>Opinion</span></span></a>
+									</li>
+									<li
+										class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2385">
+										<a
+											href="https://websecuritylab.org/topics/resources/"><span><span>Resources</span></span></a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+
+						<div class="cs-header__col cs-col-right">
+							<span class="cs-site-scheme-toggle cs-header__scheme-toggle" role="button" aria-label="Dark mode toggle button">
+				<span class="cs-header__scheme-toggle-icons">
+					<i class="cs-header__scheme-toggle-icon cs-icon cs-icon-light-mode"></i>
+					<i class="cs-header__scheme-toggle-icon cs-icon cs-icon-dark-mode"></i>
+				</span>
+							</span>
+							<span class="cs-header__search-toggle" role="button" aria-label="Search">
+			<i class="cs-icon cs-icon-search"></i>
+		</span>
+						</div>
+					</div>
+
+
+					<div class="cs-header__inner cs-header__inner-mobile">
+						<div class="cs-header__col cs-col-left">
+							<span class="cs-header__offcanvas-toggle " role="button" aria-label="Mobile menu button">
+					<i class="cs-icon cs-icon-menu1"></i>
+				</span>
+						</div>
+						<div class="cs-header__col cs-col-center">
+							<div class="cs-logo">
+								<a class="cs-header__logo cs-logo-default " href="https://websecuritylab.org/">
+									<img src="https://websecuritylab.org/wp-content/uploads/2024/09/WSLBlk@2x.png"  alt="Web Security Lab"  width="213.82289416847"  height="60" >			</a>
+
+									<a class="cs-header__logo cs-logo-dark " href="https://websecuritylab.org/">
+										<img src="https://websecuritylab.org/wp-content/uploads/2024/09/WhiteTestRun@2x.png"  alt="Web Security Lab"  width="213.82289416847"  height="60" >						</a>
+							</div>
+						</div>
+						<div class="cs-header__col cs-col-right">
+							<span class="cs-header__search-toggle" role="button" aria-label="Search">
+			<i class="cs-icon cs-icon-search"></i>
+		</span>
+						</div>
+					</div>
+
+					<div class="cs-search-overlay"></div>
+
+					<div class="cs-search">
+						<div class="cs-search__header">
+							<h2>What are You Looking for?</h2>
+
+							<span class="cs-search__close" role="button" aria-label="Close search button">
+			<i class="cs-icon cs-icon-x"></i>
+		</span>
+						</div>
+
+						<div class="cs-search__form-container">
+
+							<form role="search" method="get" class="cs-search__form"
+								action="https://websecuritylab.org/">
+								<div class="cs-search__group">
+									<input required class="cs-search__input" type="search" value="" name="s" placeholder="Search..." role="searchbox">
+
+									<button class="cs-search__submit" aria-label="Search" type="submit">
+			Search		</button>
+								</div>
+							</form>
+						</div>
+
+						<div class="cs-search__content">
+							<div class="cs-entry__post-meta">
+								<div class="cs-meta-category">
+									<ul class="post-categories">
+										<li>
+											<a href="https://websecuritylab.org/topics/cybercrime/" rel="category tag">
+												Cybercrime </a>
+										</li>
+										<li>
+											<a href="https://websecuritylab.org/topics/data-breaches/"
+												rel="category tag">
+												Data Breaches </a>
+										</li>
+										<li>
+											<a href="https://websecuritylab.org/topics/data-protection/"
+												rel="category tag">
+												Data Protection </a>
+										</li>
+										<li>
+											<a href="https://websecuritylab.org/topics/ethical-hacking/"
+												rel="category tag">
+												Ethical Hacking </a>
+										</li>
+										<li>
+											<a href="https://websecuritylab.org/topics/operating-systems/linux/"
+												rel="category tag">
+												Linux </a>
+										</li>
+										<li>
+											<a href="https://websecuritylab.org/topics/networking/" rel="category tag">
+												Networking </a>
+										</li>
+										<li>
+											<a href="https://websecuritylab.org/topics/operating-systems/"
+												rel="category tag">
+												Operating Systems </a>
+										</li>
+										<li>
+											<a href="https://websecuritylab.org/topics/opinion/" rel="category tag">
+												Opinion </a>
+										</li>
+										<li>
+											<a href="https://websecuritylab.org/topics/reports/" rel="category tag">
+												Reports </a>
+										</li>
+										<li>
+											<a href="https://websecuritylab.org/topics/resources/" rel="category tag">
+												Resources </a>
+										</li>
+										<li>
+											<a href="https://websecuritylab.org/topics/threats-vulnerabilities/"
+												rel="category tag">
+												Threats &amp; Vulnerabilities </a>
+										</li>
+										<li>
+											<a href="https://websecuritylab.org/topics/operating-systems/windows/"
+												rel="category tag">
+												Windows </a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+
+			<main id="main" class="cs-site-primary">
+
+				<div class="cs-entry__media-large cs-entry__media-large_overlay cs-video-wrap">
+					<div class="cs-entry__media-inner">
+						<div class="cs-entry__media-wrap cs-overlay-ratio cs-ratio-wide" data-scheme="inverse">
+
+							<figure class="cs-overlay-background">
+								<img width="920" height="518" src="https://websecuritylab.org/wp-content/uploads/2025/04/Wifi-920x518.png" class="attachment-csco-medium-uncropped size-csco-medium-uncropped wp-post-image" alt="" decoding="async" fetchpriority="high" srcset="https://websecuritylab.org/wp-content/uploads/2025/04/Wifi-920x518.png 920w, https://websecuritylab.org/wp-content/uploads/2025/04/Wifi-300x169.png 300w, https://websecuritylab.org/wp-content/uploads/2025/04/Wifi-1024x576.png 1024w, https://websecuritylab.org/wp-content/uploads/2025/04/Wifi-768x432.png 768w, https://websecuritylab.org/wp-content/uploads/2025/04/Wifi-1536x864.png 1536w, https://websecuritylab.org/wp-content/uploads/2025/04/Wifi-512x288.png 512w, https://websecuritylab.org/wp-content/uploads/2025/04/Wifi-1600x900.png 1600w, https://websecuritylab.org/wp-content/uploads/2025/04/Wifi.png 1920w" sizes="(max-width: 920px) 100vw, 920px" />
+								<img width="1920" height="1080" src="https://websecuritylab.org/wp-content/uploads/2025/04/Wifi.png" class="attachment-csco-extra-large-uncropped size-csco-extra-large-uncropped wp-post-image" alt="" decoding="async" srcset="https://websecuritylab.org/wp-content/uploads/2025/04/Wifi.png 1920w, https://websecuritylab.org/wp-content/uploads/2025/04/Wifi-300x169.png 300w, https://websecuritylab.org/wp-content/uploads/2025/04/Wifi-1024x576.png 1024w, https://websecuritylab.org/wp-content/uploads/2025/04/Wifi-768x432.png 768w, https://websecuritylab.org/wp-content/uploads/2025/04/Wifi-1536x864.png 1536w, https://websecuritylab.org/wp-content/uploads/2025/04/Wifi-512x288.png 512w, https://websecuritylab.org/wp-content/uploads/2025/04/Wifi-920x518.png 920w, https://websecuritylab.org/wp-content/uploads/2025/04/Wifi-1600x900.png 1600w" sizes="(max-width: 1920px) 100vw, 1920px" />					</figure>
+
+								<div class="cs-breadcrumbs-overlay">
+									<div class="cs-container">
+										<div class="cs-breadcrumbs" id="breadcrumbs">
+											<span><span><a href="https://websecuritylab.org/">Home</a></span>
+											<span class="cs-separator"></span>
+											<span><a href="https://websecuritylab.org/topics/networking/">Networking</a></span>
+											<span class="cs-separator"></span>
+											<span class="breadcrumb_last" aria-current="page">How Safe is Public Wi-Fi? A Network Engineer Explains</span></span>
+										</div>
+									</div>
+								</div>
+								<div class="cs-entry__media-content">
+									<div class="cs-container">
+										<div class="cs-entry__header cs-entry__header-overlay">
+
+											<div class="cs-entry__header-content cs-overlay-content">
+												<div class="cs-entry__post-meta">
+													<div class="cs-meta-author">
+														<span class="cs-meta-author-by">By</span><a
+															class="cs-meta-author-link url fn n"
+															href="https://websecuritylab.org/author/chidiadi-anyanwu/">
+															<picture class="cs-meta-author-avatar">
+																<img alt='' src='https://websecuritylab.org/wp-content/uploads/2025/04/feda1fb0-f812-4a24-9de1-65e69b65be1f.jpeg' srcset='https://websecuritylab.org/wp-content/uploads/2025/04/feda1fb0-f812-4a24-9de1-65e69b65be1f.jpeg 2x' class='avatar avatar-36 photo avatar-default' height='36' width='36' decoding='async'/></picture>
+																<span class="cs-meta-author-name">Chidiadi Anyanwu</span>
+														</a></div>
+													<div class="cs-meta-date">April 7, 2025</div>
+												</div>
+												<h1 class="cs-entry__title">
+													<span>How Safe is Public Wi-Fi? A Network Engineer Explains</span>
+												</h1>
+											</div>
+
+										</div>
+									</div>
+								</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="cs-site-content cs-sidebar-enabled cs-sidebar-right">
+
+
+					<div class="cs-container">
+
+
+						<div id="content" class="cs-main-content">
+
+
+
+							<div id="primary" class="cs-content-area">
+
+
+
+
+
+								<div class="cs-entry__wrap">
+
+
+									<div class="cs-entry__container">
+
+
+										<div class="cs-entry__content-wrap">
+
+											<div class="entry-content">
+
+												<p>Public Wi-Fi is a modern convenience, but it comes with certain
+													security risks. While it offers easy internet access in coffee
+													shops, airports, and hotels, these networks are prime targets for
+													cybercriminals. </p>
+
+
+
+												<p>The question remains:
+													<strong>Are the dangers of public Wi-Fi overstated, or are they real threats that demand caution?</strong>
+												</p>
+
+
+
+												<p>In this article, we examine the risks associated with public Wi-Fi,
+													analyze common attack methods, and provide insights on how to stay
+													safe when using these networks.</p>
+
+
+
+												<h2 class="wp-block-heading"
+													id="h-what-does-the-network-topology-look-like">
+													<span id="what-does-the-network-topology-look-like">What does the network topology look like?</span>
+												</h2>
+
+
+
+												<p>A public Wi-Fi network is a Wireless Local Area Network (WLAN). </p>
+
+
+
+												<p>It consists of connected devices—user devices, access points,
+													switches, routers—linked to another network, usually the
+													organization’s LAN or the internet.</p>
+
+
+
+												<p>A WLAN is a layer 2 network. Sometimes, the access point, switch, and
+													router functions can be carried out by a single device known as a
+													wireless router. </p>
+
+
+
+												<p>It is often a wireless extension of a wired LAN. In a WLAN, the user
+													devices are known as wireless stations (STA), the wireless device to
+													which they connect is known as the wireless access point (AP), and
+													the Wi-Fi name or label is known as the Service Set Identifier
+													(SSID). </p>
+
+
+
+												<p>This is what you see when you scan for available Wi-Fi.</p>
+
+
+
+												<figure class="wp-block-image">
+													<img decoding="async" src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdQWB49ceeiuvKGjLLDmo-BDx7QxeWQR4YEPiJ4PbxzdyC_qKznI6IQ7u5jnYaCNKDS07HofrU9A2xKqfoBTvUpZHPZ70tLyk1o1ChdhxX5tM0cL-pgVzUHCaxp5VWcOc8e0QQYmA?key=ppeVz--J5rJFSupJMbxnqCzl" alt=""/></figure>
+
+
+
+													<h2 class="wp-block-heading"
+														id="h-what-kind-of-attacks-can-be-carried-out">
+														<span id="what-kind-of-attacks-can-be-carried-out">What kind of attacks can be carried out?</span>
+													</h2>
+
+
+
+													<p>Here are some of the techniques used by attackers on Wi-Fi
+														networks:</p>
+
+
+
+													<h3 class="wp-block-heading" id="h-1-man-in-the-middle-mitm-attack">
+														<span id="1-man-in-the-middle-mitm-attack">1. Man-In-The-Middle (MiTM) Attack</span>
+													</h3>
+
+
+
+													<p>This attack aims to intercept the network and come in between the
+														users and the access point. </p>
+
+
+
+													<p>When this is done, you see the attacker’s device as the Wi-Fi
+														access point, and the access point sees the attacker’s device as
+														your device. </p>
+
+
+
+													<p>Information is being relayed between the access point and your
+														device through the attacker. </p>
+
+
+
+													<p>That way, the attacker can see everything being done. A common
+														way of doing this is<a
+															href="https://thenetworkbits.substack.com/p/arp-poisoning">
+															ARP spoofing</a>.</p>
+
+
+
+													<h4 class="wp-block-heading" id="h-arp-spoofing">
+														<span id="arp-spoofing">ARP Spoofing</span></h4>
+
+
+
+													<p>The Address Resolution Protocol (ARP) is a protocol used by
+														devices on a network to determine what device has what IP
+														address on the network. </p>
+
+
+
+													<p>It maps physical addresses (MAC address) to the IP addresses of
+														devices on layer 2 networks. </p>
+
+
+
+													<p>On a network, devices use IP addresses to communicate, but on a
+														layer 2 network like in public Wi-Fi, they need to know where
+														the devices are located. </p>
+
+
+
+													<p>That’s the job of the MAC address. </p>
+
+
+
+													<p>A good analogy would be an office setting where the manager’s
+														name is John, and his office is Room 4. </p>
+
+
+
+													<p>The accountant’s name is Ototo, and his office is Room 15. </p>
+
+
+
+													<p>Take the names as the IP address and the room numbers as the MAC
+														address. </p>
+
+
+
+													<p>You want to send a note to your manager, and you know his name.
+													</p>
+
+
+
+													<p>The ARP protocol is what will make you know that to get this note
+														to John, you need to send it to Room 4. </p>
+
+
+
+													<p>The ARP protocol builds a table called the ARP cache where you
+														can look up the mappings.</p>
+
+
+
+													<p>In ARP spoofing, the attacker sends spoofed (false) ARP packets
+														over the network so as to corrupt the ARP cache of target
+														devices and force the victim to link the IP address of another
+														device (in this case, the AP or router) with the attacker’s own
+														MAC address. </p>
+
+
+
+													<p>So, in our analogy, let’s say the attacker was in the conference
+														room; he’ll convince you that John is in the conference room and
+														that if you want your note to reach John, you should send it to
+														the conference room at Room 52 instead of Room 4. </p>
+
+
+
+													<p>And he can convince John that if he wants to send his reply, he
+														should send it to Room 52, instead of Room 2 where you really
+														are.</p>
+
+
+
+													<p>What happens then is that he can now receive notes from you, read
+														them, maybe edit and modify them, and then pass them on to Room
+														4. </p>
+
+
+
+													<p>John will receive the notes from him, thinking they’re coming
+														directly from you. </p>
+
+
+
+													<p>He has successfully conducted a man-in-the-middle attack.</p>
+
+
+
+													<h4 class="wp-block-heading" id="h-evil-twin-attack">
+														<span id="evil-twin-attack">Evil Twin Attack</span></h4>
+
+
+
+													<p>This is another way Wi-Fi users can be attacked. In this method,
+														the attacker creates a fake Wi-Fi access point and Service Set
+														Identifier (SSID) that is a copy of the real one in the
+														location. </p>
+
+
+
+													<p>An ‘evil twin. ’ Your device then connects to the attacker’s
+														network automatically, or you do so without knowing it’s not the
+														real network. </p>
+
+
+
+													<p>And your traffic is sent directly to him. The attacker can also
+														have access to your device that way. </p>
+
+
+
+													<p>This is another method of carrying out man-in-the-middle attacks
+														on WLANs.</p>
+
+
+
+													<h3 class="wp-block-heading" id="h-2-deauthentication-attack">
+														<span id="2-deauthentication-attack">2. Deauthentication Attack</span>
+													</h3>
+
+
+
+													<p>Sometimes, the attackers have other things in mind. </p>
+
+
+
+													<p>They want to be able to steal from an encrypted network, or they
+														want to log out all users. </p>
+
+
+
+													<p>Then, they take advantage of a feature of the 802.11 protocol—the
+														deauthentication frame. </p>
+
+
+
+													<p>The deauthentication frame is a frame used to terminate
+														connections. It can be sent by a wireless station (your device)
+														or the access point itself, for multiple reasons.</p>
+
+
+
+													<p>The attacker sends fake deauthentication frames to the access
+														point with the MAC address of the target. </p>
+
+
+
+													<p>This deceives the access point into thinking that your device
+														requested to disconnect. </p>
+
+
+
+													<p>This type of attack is not a man-in-the-middle attack, but a
+														Denial of Service (Dos) attack. </p>
+
+
+
+													<p>However, it may be used to force you to connect to the attacker’s
+														network or to capture traffic when your device is reconnecting
+														to the legitimate network. Then try to use that to obtain the
+														password.</p>
+
+
+
+													<h2 class="wp-block-heading" id="h-what-can-be-the-effects">
+														<span id="what-can-be-the-effects">What can be the effects?</span>
+													</h2>
+
+
+
+													<p>The attacker has successfully executed a MiTM attack. </p>
+
+
+
+													<p>Your traffic now passes through him to its destination. </p>
+
+
+
+													<p>He’s happy. But what can he achieve with that? </p>
+
+
+
+													<p>Well, since he now sees all your traffic, he is able to monitor
+														and manipulate you in certain ways.</p>
+
+
+
+													<h3 class="wp-block-heading" id="h-network-sniffing">
+														<span id="network-sniffing">Network Sniffing</span></h3>
+
+
+
+													<p>Network sniffing is simply a term used to describe monitoring
+														what goes on in a network. Since traffic from your device passes
+														through his to the internet, he is able to capture packets and
+														see what is being relayed between your device and the internet.
+													</p>
+
+
+
+													<p>That can tell him a lot of things. </p>
+
+
+
+													<p>From your DNS requests, he knows what sites you are visiting.
+													</p>
+
+
+
+													<p>From HTTP requests, he can know more precisely what you are doing
+														with particular web servers. </p>
+
+
+
+													<p>He may even be able to capture passwords and login details that
+														are relayed in plain text. </p>
+
+
+
+													<p>Then, he can also modify the packets you sent before sending them
+														out or modify them before relaying them back to you.</p>
+
+
+
+													<p>However, the risks here may be low because almost every website
+														now uses HTTPS, which is the encrypted version of HTTP, so not
+														much can be gotten from reading your traffic. </p>
+
+
+
+													<h3 class="wp-block-heading" id="h-dns-spoofing">
+														<span id="dns-spoofing">DNS spoofing</span></h3>
+
+
+
+													<p><a
+															href="https://www.linkedin.com/pulse/dns-deep-dive-chidiadi-anyanwu/">Domain
+															Name System (DNS)</a> is the system that helps associate IP
+														addresses with domain names so that you can access the internet
+														by typing <em>google.com</em> instead of typing 142.250.201.78
+														into your browser.  Your device does not know the IP addresses
+														of various domains on the internet and has to depend on servers
+														scattered all over the internet called DNS servers. </p>
+
+
+
+													<p>Most times, your devices configure DNS servers through DHCP. An
+														attacker who is in can perform DHCP spoofing and trick your
+														device to use his DNS server with fake records that point to his
+														own servers.</p>
+
+
+
+													<p>So, when you type in <em>google.com</em>, a different website,
+														maybe a clone owned by the attacker on a different IP address is
+														delivered to your device. That way, you can hand him your
+														password and login details or any other sensitive information
+														peacefully without a gun to your head.</p>
+
+
+
+													<h3 class="wp-block-heading" id="h-malware">
+														<span id="malware">Malware</span></h3>
+
+
+
+													<p>It is also possible that the attacker can then inject malware
+														into your device, and secure his backdoor so he does not need to
+														go through all the stress when visiting next time.&nbsp;</p>
+
+
+
+													<p>ARP spoofing can be done with any PC with the required software
+														tools. For attacks like the evil twin attack and
+														deauthentication attack, however, they require Wi-Fi adapters
+														that support monitor mode, packet injection, and AP mode. That
+														requires more prepared actors.</p>
+
+
+
+													<h2 class="wp-block-heading" id="h-how-do-we-protect-ourselves">
+														<span id="how-do-we-protect-ourselves">How do we protect ourselves?</span>
+													</h2>
+
+
+
+													<p>Given all that has been said, it is obvious that there are risks
+														associated with using public Wi-Fi. Hackers often exploit
+														unsecured networks to steal sensitive information. However,
+														there are things we can do to protect ourselves from potential
+														attacks.&nbsp;</p>
+
+
+
+													<h3 class="wp-block-heading"
+														id="h-disable-automatic-wi-fi-connection">
+														<span id="disable-automatic-wi-fi-connection">Disable automatic Wi-Fi connection</span>
+													</h3>
+
+
+
+													<p>One of the ways you’ll be able to connect to an evil twin is if
+														your device automatically connects to networks. Devices always
+														prioritize the network with the stronger signal, and an evil
+														twin looks exactly like the network your device has been
+														connected to before. So, it can more easily connect to the evil
+														twin than the real network, because the attackers are smart
+														enough to make their signals stronger. Instead of automatically
+														connecting, you should manually connect so you can see the
+														networks and see if there’s any suspicious activity before you
+														connect. I know that for the sake of convenience, this is easier
+														said than done. And maybe not always practical.</p>
+
+
+
+													<h3 class="wp-block-heading" id="h-use-a-vpn">
+														<span id="use-a-vpn">Use a VPN</span></h3>
+
+
+
+													<p>A VPN is basically an encrypted tunnel through which your data
+														passes. It protects your data while in transit. So, anyone
+														sniffing the network should not be able to glean anything from
+														it. In the case of a public Wi-Fi where there’s a MiTM attack,
+														the attacker in his packet capture will only see your VPN
+														protocol. He wouldn’t be able to figure out a thing about your
+														online activity unless, of course, the company providing the
+														service works with him.</p>
+
+
+
+													<h3 class="wp-block-heading" id="h-activate-dns-security">
+														<span id="activate-dns-security">Activate DNS Security</span>
+													</h3>
+
+
+
+													<p>DNS is one of the unencrypted protocols. For anyone sniffing,
+														they can use your DNS traffic to have an idea of what you’re
+														doing. However, you can add an extra layer of protection by<a
+															href="https://websecuritylab.org/understanding-dns-encryption/">
+															encrypting your DNS traffic</a> with HTTPS or TLS.</p>
+
+
+
+													<h3 class="wp-block-heading"
+														id="h-avoid-logging-into-sensitive-accounts-with-public-wi-fi">
+														<span id="avoid-logging-into-sensitive-accounts-with-public-wi-fi">Avoid logging into sensitive accounts with public Wi-Fi</span>
+													</h3>
+
+
+
+													<p>One precaution that can be taken is to not log into bank accounts
+														or any sensitive accounts over public Wi-Fi. Just in case. If
+														you never do that, then even when there is a breach, you don’t
+														run the risk of handing over passwords, login details and
+														session tokens on a platter of gold.</p>
+
+
+
+													<h2 class="wp-block-heading" id="h-conclusion">
+														<span id="conclusion">Conclusion</span></h2>
+
+
+
+													<p>This article has hopefully given you an idea of how public Wi-Fi
+														works, and the types of threats to expect when using public
+														Wi-Fi. The threats usually involve someone being there in the
+														same physical location with you. If you enjoyed the article,
+														please share it with others.</p>
+													<div class="pk-clearfix"></div>
+													<div class="pk-share-buttons-wrap pk-share-buttons-layout-simple pk-share-buttons-scheme-default pk-share-buttons-after-content pk-share-buttons-mode-php pk-share-buttons-mode-rest"
+														data-post-id="3503"
+														data-share-url="https://websecuritylab.org/how-safe-is-public-wi-fi-a-network-engineer-explains/">
+
+
+														<div class="pk-share-buttons-items">
+
+															<div class="pk-share-buttons-item pk-share-buttons-twitter pk-share-buttons-no-count"
+																data-id="twitter">
+
+																<a href="https://twitter.com/share?&text=How%20Safe%20is%20Public%20Wi-Fi%3F%20A%20Network%20Engineer%20Explains&url=https://websecuritylab.org/how-safe-is-public-wi-fi-a-network-engineer-explains/"
+																	class="pk-share-buttons-link" target="_blank">
+
+																	<i class="pk-share-buttons-icon pk-icon pk-icon-twitter"></i>
+
+
+
+																</a>
+
+
+
+															</div>
+															<div class="pk-share-buttons-item pk-share-buttons-linkedin pk-share-buttons-no-count"
+																data-id="linkedin">
+
+																<a href="https://www.linkedin.com/shareArticle?mini=true&url=https://websecuritylab.org/how-safe-is-public-wi-fi-a-network-engineer-explains/"
+																	class="pk-share-buttons-link" target="_blank">
+
+																	<i class="pk-share-buttons-icon pk-icon pk-icon-linkedin"></i>
+
+
+
+																</a>
+
+
+
+															</div>
+															<div class="pk-share-buttons-item pk-share-buttons-mail pk-share-buttons-no-count"
+																data-id="mail">
+
+																<a href="/cdn-cgi/l/email-protection#b18ec2c4d3dbd4d2c58cf9dec6948381e2d0d7d4948381d8c2948381e1c4d3ddd8d2948381e6d89cf7d89482f7948381f0948381ffd4c5c6dec3da948381f4dfd6d8dfd4d4c3948381f4c9c1ddd0d8dfc297d3ded5c88cf9dec6948381e2d0d7d4948381d8c2948381e1c4d3ddd8d2948381e6d89cf7d89482f7948381f0948381ffd4c5c6dec3da948381f4dfd6d8dfd4d4c3948381f4c9c1ddd0d8dfc2948381d9c5c5c1c28b9e9ec6d4d3c2d4d2c4c3d8c5c8ddd0d39fdec3d69ed9dec69cc2d0d7d49cd8c29cc1c4d3ddd8d29cc6d89cd7d89cd09cdfd4c5c6dec3da9cd4dfd6d8dfd4d4c39cd4c9c1ddd0d8dfc29e"
+																	class="pk-share-buttons-link" target="_blank">
+
+																	<i class="pk-share-buttons-icon pk-icon pk-icon-mail"></i>
+
+
+
+																</a>
+
+
+
+															</div>
+															<div class="pk-share-buttons-item pk-share-buttons-whatsapp pk-share-buttons-no-count"
+																data-id="whatsapp">
+
+																<a href="whatsapp://send?text=https://websecuritylab.org/how-safe-is-public-wi-fi-a-network-engineer-explains/"
+																	class="pk-share-buttons-link" target="_blank">
+
+																	<i class="pk-share-buttons-icon pk-icon pk-icon-whatsapp"></i>
+
+
+
+																</a>
+
+
+
+															</div>
+														</div>
+													</div>
+											</div>
+
+											<div class="cs-entry__tags">
+												<ul>
+													<li><a href="https://websecuritylab.org/tag/latest/"
+															rel="tag">Latest</a></li>
+												</ul>
+											</div>
+										</div>
+
+
+									</div>
+
+
+									<div class="cs-entry__footer">
+										<div class="cs-entry__footer-top">
+											<div class="cs-entry__footer-top-left">
+												<div class="cs-entry__post-meta">
+													<div class="cs-meta-author">
+														<span class="cs-meta-author-by">By</span><a
+															class="cs-meta-author-link url fn n"
+															href="https://websecuritylab.org/author/chidiadi-anyanwu/">
+															<picture class="cs-meta-author-avatar">
+																<img alt='' src='https://websecuritylab.org/wp-content/uploads/2025/04/feda1fb0-f812-4a24-9de1-65e69b65be1f.jpeg' srcset='https://websecuritylab.org/wp-content/uploads/2025/04/feda1fb0-f812-4a24-9de1-65e69b65be1f.jpeg 2x' class='avatar avatar-36 photo avatar-default' height='36' width='36' decoding='async'/></picture>
+																<span class="cs-meta-author-name">Chidiadi Anyanwu</span>
+														</a></div>
+												</div>
+												<div class="cs-entry__footer-date">
+													<div class="cs-entry__footer-date-inner">
+														<span class="cs-entry__footer-title">Updated on</span>
+														<time class="cs-entry__footer-value">April 07, 2025</time>
+													</div>
+												</div>
+											</div>
+											<div class="cs-entry__footer-top-right">
+												<div class="cs-entry__post-meta">
+													<div class="cs-meta-category">
+														<ul class="post-categories">
+															<li><a href="https://websecuritylab.org/topics/networking/"
+																	rel="category tag">Networking</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<section class="cs-read-next">
+										<div class="cs-read-next__heading">
+											<h2>
+												Read Next </h2>
+										</div>
+
+										<div class="cs-posts-area__read-next cs-posts-area__list">
+
+											<article class="cs-entry">
+												<div class="cs-entry__outer">
+													<div class="cs-entry__inner cs-entry__thumbnail cs-entry__overlay cs-overlay-ratio cs-ratio-landscape-16-9"
+														data-scheme="inverse">
+
+														<div class="cs-overlay-background">
+															<img width="512" height="288" src="https://websecuritylab.org/wp-content/uploads/2024/04/DNS-Encyrption-Explained-512x288.png" class="attachment-csco-thumbnail-16x9 size-csco-thumbnail-16x9 wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://websecuritylab.org/wp-content/uploads/2024/04/DNS-Encyrption-Explained-512x288.png 512w, https://websecuritylab.org/wp-content/uploads/2024/04/DNS-Encyrption-Explained-1024x576.png 1024w" sizes="auto, (max-width: 512px) 100vw, 512px" />									</div>
+
+
+															<a class="cs-overlay-link"
+																href="https://websecuritylab.org/understanding-dns-encryption/"
+																title="DNS Encryption: DNS over HTTPS (DoH) and DNS over TLS (DoT)"></a>
+														</div>
+
+														<div class="cs-entry__inner cs-entry__content">
+															<div class="cs-entry__post-meta">
+																<div class="cs-meta-author">
+																	<span class="cs-meta-author-by">By</span><a
+																		class="cs-meta-author-link url fn n"
+																		href="https://websecuritylab.org/author/david-odes/"><span class="cs-meta-author-name">David Odes</span></a>
+																</div>
+																<div class="cs-meta-date">April 1, 2024</div>
+															</div>
+															<h3 class="cs-entry__title"><a
+																	href="https://websecuritylab.org/understanding-dns-encryption/"><span>DNS Encryption: DNS over HTTPS (DoH) and DNS over TLS (DoT)</span></a>
+															</h3>
+															<div class="cs-entry__excerpt">
+																Every time you type a website address into your browser
+																or click on a link, your computer performs&hellip;
+															</div>
+
+															<div class="cs-entry__post-meta">
+																<div class="cs-meta-category">
+																	<ul class="post-categories">
+																		<li><a href="https://websecuritylab.org/topics/data-protection/"
+																				rel="category tag">Data Protection</a>
+																		</li>
+																		<li><a href="https://websecuritylab.org/topics/networking/"
+																				rel="category tag">Networking</a></li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</div>
+											</article>
+
+
+											<article class="cs-entry">
+												<div class="cs-entry__outer">
+													<div class="cs-entry__inner cs-entry__thumbnail cs-entry__overlay cs-overlay-ratio cs-ratio-landscape-16-9"
+														data-scheme="inverse">
+
+														<div class="cs-overlay-background">
+															<img width="512" height="288" src="https://websecuritylab.org/wp-content/uploads/2024/04/RRDNS-512x288.png" class="attachment-csco-thumbnail-16x9 size-csco-thumbnail-16x9 wp-post-image" alt="RRDNS" decoding="async" loading="lazy" srcset="https://websecuritylab.org/wp-content/uploads/2024/04/RRDNS-512x288.png 512w, https://websecuritylab.org/wp-content/uploads/2024/04/RRDNS-1024x576.png 1024w" sizes="auto, (max-width: 512px) 100vw, 512px" />									</div>
+
+
+															<a class="cs-overlay-link"
+																href="https://websecuritylab.org/round-robin-dns-rrdns-explained/"
+																title="Round-Robin DNS (RRDNS) Explained"></a>
+														</div>
+
+														<div class="cs-entry__inner cs-entry__content">
+															<div class="cs-entry__post-meta">
+																<div class="cs-meta-author">
+																	<span class="cs-meta-author-by">By</span><a
+																		class="cs-meta-author-link url fn n"
+																		href="https://websecuritylab.org/author/david-odes/"><span class="cs-meta-author-name">David Odes</span></a>
+																</div>
+																<div class="cs-meta-date">April 24, 2024</div>
+															</div>
+															<h3 class="cs-entry__title"><a
+																	href="https://websecuritylab.org/round-robin-dns-rrdns-explained/"><span>Round-Robin DNS (RRDNS) Explained</span></a>
+															</h3>
+															<div class="cs-entry__excerpt">
+																Round-Robin DNS is a load-balancing method that operates
+																on the DNS level by distributing incoming traffic across
+																multiple&hellip; </div>
+
+															<div class="cs-entry__post-meta">
+																<div class="cs-meta-category">
+																	<ul class="post-categories">
+																		<li><a href="https://websecuritylab.org/topics/networking/"
+																				rel="category tag">Networking</a></li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</div>
+											</article>
+
+
+											<article class="cs-entry">
+												<div class="cs-entry__outer">
+													<div class="cs-entry__inner cs-entry__thumbnail cs-entry__overlay cs-overlay-ratio cs-ratio-landscape-16-9"
+														data-scheme="inverse">
+
+														<div class="cs-overlay-background">
+															<img width="512" height="288" src="https://websecuritylab.org/wp-content/uploads/2024/10/Io-DOMAIN-NAME-512x288.webp" class="attachment-csco-thumbnail-16x9 size-csco-thumbnail-16x9 wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://websecuritylab.org/wp-content/uploads/2024/10/Io-DOMAIN-NAME-512x288.webp 512w, https://websecuritylab.org/wp-content/uploads/2024/10/Io-DOMAIN-NAME-300x169.webp 300w, https://websecuritylab.org/wp-content/uploads/2024/10/Io-DOMAIN-NAME-1024x576.webp 1024w, https://websecuritylab.org/wp-content/uploads/2024/10/Io-DOMAIN-NAME-768x432.webp 768w, https://websecuritylab.org/wp-content/uploads/2024/10/Io-DOMAIN-NAME-1536x864.webp 1536w, https://websecuritylab.org/wp-content/uploads/2024/10/Io-DOMAIN-NAME-2048x1152.webp 2048w, https://websecuritylab.org/wp-content/uploads/2024/10/Io-DOMAIN-NAME-920x518.webp 920w, https://websecuritylab.org/wp-content/uploads/2024/10/Io-DOMAIN-NAME-1600x900.webp 1600w, https://websecuritylab.org/wp-content/uploads/2024/10/Io-DOMAIN-NAME-1920x1080.webp 1920w, https://websecuritylab.org/wp-content/uploads/2024/10/Io-DOMAIN-NAME.webp 2240w" sizes="auto, (max-width: 512px) 100vw, 512px" />									</div>
+
+
+															<a class="cs-overlay-link"
+																href="https://websecuritylab.org/will-the-io-domain-survive-how-geopolitics-could-impact-techs-favourite-cctld/"
+																title="Will the .io Domain Survive? How Geopolitics Could Impact Tech’s Favourite ccTLD"></a>
+														</div>
+
+														<div class="cs-entry__inner cs-entry__content">
+															<div class="cs-entry__post-meta">
+																<div class="cs-meta-author">
+																	<span class="cs-meta-author-by">By</span><a
+																		class="cs-meta-author-link url fn n"
+																		href="https://websecuritylab.org/author/david-odes/"><span class="cs-meta-author-name">David Odes</span></a>
+																</div>
+																<div class="cs-meta-date">October 14, 2024</div>
+															</div>
+															<h3 class="cs-entry__title"><a
+																	href="https://websecuritylab.org/will-the-io-domain-survive-how-geopolitics-could-impact-techs-favourite-cctld/"><span>Will the .io Domain Survive? How Geopolitics Could Impact Tech’s Favourite ccTLD</span></a>
+															</h3>
+															<div class="cs-entry__excerpt">
+																The popular .io domain – widely used by tech startups,
+																developers, and cryptocurrency companies – faces an
+																uncertain&hellip; </div>
+
+															<div class="cs-entry__post-meta">
+																<div class="cs-meta-category">
+																	<ul class="post-categories">
+																		<li><a href="https://websecuritylab.org/topics/networking/"
+																				rel="category tag">Networking</a></li>
+																		<li><a href="https://websecuritylab.org/topics/reports/"
+																				rel="category tag">Reports</a></li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</div>
+											</article>
+
+										</div>
+									</section>
+
+
+									<div class="cs-entry__comments" id="comments">
+
+										<div class="cs-entry__comments-inner">
+
+
+
+											<div id="respond" class="comment-respond">
+												<h2 id="reply-title" class="comment-reply-title">Leave a Reply
+													<small><a rel="nofollow" id="cancel-comment-reply-link" href="/how-safe-is-public-wi-fi-a-network-engineer-explains/#respond" style="display:none;">Cancel reply</a></small>
+												</h2>
+												<form action="https://websecuritylab.org/wp-comments-post.php"
+													method="post" id="commentform" class="comment-form" novalidate>
+													<p class="comment-notes">
+														<span id="email-notes">Your email address will not be published.</span>
+														<span class="required-field-message">Required fields are marked <span class="required">*</span></span>
+													</p>
+													<p class="comment-form-comment">
+														<label for="comment">Comment <span class="required">*</span></label><textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea>
+													</p>
+													<p class="comment-form-author">
+														<label for="author">Your Name <span class="required">*</span></label><input id="author" name="author" type="text" value="" size="30" maxlength="245"  required='required'></p>
+														<p class="comment-form-email">
+															<label for="email">Email Address <span class="required">*</span></label><input id="email" name="email" type="email" value="" size="30" maxlength="100"  required='required'></p>
+															<p class="comment-form-url">
+																<label for="url">Website</label><input id="url" name="url" type="url" value="" size="30" maxlength="200"></p>
+																<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" />
+																	<label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label>
+																</p>
+																<p class="form-submit">
+																	<button name="submit" type="submit" id="submit" class="submit" value="Post Comment" />Submit Comment </button>
+																	<input type='hidden' name='comment_post_ID' value='3503' id='comment_post_ID' />
+																	<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p>
+												</form>
+											</div><!-- #respond -->
+
+										</div>
+
+									</div>
+
+								</div>
+
+
+
+
+							</div>
+
+							<aside id="secondary" class="cs-widget-area cs-sidebar__area">
+								<div class="cs-sidebar__inner">
+
+
+									<div class="widget block-7 widget_block">
+										<div class="wp-block-group is-style-cs-about">
+											<div
+												class="wp-block-group__inner-container is-layout-constrained wp-block-group-is-layout-constrained">
+												<figure
+													class="wp-block-image size-full is-resized cs-display-only-light">
+													<img loading="lazy" decoding="async" width="1650" height="463" src="https://websecuritylab.org/wp-content/uploads/2024/09/WSLBlk@2x.png" alt="" class="wp-image-3277" style="object-fit:cover;width:164px;height:auto" srcset="https://websecuritylab.org/wp-content/uploads/2024/09/WSLBlk@2x.png 1650w, https://websecuritylab.org/wp-content/uploads/2024/09/WSLBlk@2x-300x84.png 300w, https://websecuritylab.org/wp-content/uploads/2024/09/WSLBlk@2x-1024x287.png 1024w, https://websecuritylab.org/wp-content/uploads/2024/09/WSLBlk@2x-768x216.png 768w, https://websecuritylab.org/wp-content/uploads/2024/09/WSLBlk@2x-1536x431.png 1536w, https://websecuritylab.org/wp-content/uploads/2024/09/WSLBlk@2x-512x144.png 512w, https://websecuritylab.org/wp-content/uploads/2024/09/WSLBlk@2x-920x258.png 920w, https://websecuritylab.org/wp-content/uploads/2024/09/WSLBlk@2x-1600x449.png 1600w" sizes="auto, (max-width: 1650px) 100vw, 1650px" /></figure>
+
+
+
+													<figure
+														class="wp-block-image size-full is-resized cs-display-only-dark">
+														<img loading="lazy" decoding="async" width="1650" height="463" src="https://websecuritylab.org/wp-content/uploads/2024/09/WhiteTestRun@2x.png" alt="Web Security Lab Logo" class="wp-image-3275" style="object-fit:cover;width:164px;height:auto" srcset="https://websecuritylab.org/wp-content/uploads/2024/09/WhiteTestRun@2x.png 1650w, https://websecuritylab.org/wp-content/uploads/2024/09/WhiteTestRun@2x-300x84.png 300w, https://websecuritylab.org/wp-content/uploads/2024/09/WhiteTestRun@2x-1024x287.png 1024w, https://websecuritylab.org/wp-content/uploads/2024/09/WhiteTestRun@2x-768x216.png 768w, https://websecuritylab.org/wp-content/uploads/2024/09/WhiteTestRun@2x-1536x431.png 1536w, https://websecuritylab.org/wp-content/uploads/2024/09/WhiteTestRun@2x-512x144.png 512w, https://websecuritylab.org/wp-content/uploads/2024/09/WhiteTestRun@2x-920x258.png 920w, https://websecuritylab.org/wp-content/uploads/2024/09/WhiteTestRun@2x-1600x449.png 1600w" sizes="auto, (max-width: 1650px) 100vw, 1650px" /></figure>
+
+
+
+														<p class="has-primary-color has-text-color"
+															style="font-size:18px;font-style:normal;font-weight:500">
+															Securing Tomorrow Together Through Education, Awareness, and
+															Action</p>
+
+
+
+														<ul
+															class="wp-block-social-links has-icon-color is-style-logos-only is-layout-flex wp-block-social-links-is-layout-flex">
+															<li style="color: #1D1D1F; "
+																class="wp-social-link wp-social-link-twitter has-primary-color wp-block-social-link">
+																<a rel="noopener nofollow" target="_blank"
+																	href="https://twitter.com/websecuritylab/"
+																	title="Twitter"
+																	class="wp-block-social-link-anchor"><svg width="24"
+																		height="24" viewBox="0 0 24 24" version="1.1"
+																		xmlns="http://www.w3.org/2000/svg"
+																		aria-hidden="true" focusable="false">
+																		<path
+																			d="M22.23,5.924c-0.736,0.326-1.527,0.547-2.357,0.646c0.847-0.508,1.498-1.312,1.804-2.27 c-0.793,0.47-1.671,0.812-2.606,0.996C18.324,4.498,17.257,4,16.077,4c-2.266,0-4.103,1.837-4.103,4.103 c0,0.322,0.036,0.635,0.106,0.935C8.67,8.867,5.647,7.234,3.623,4.751C3.27,5.357,3.067,6.062,3.067,6.814 c0,1.424,0.724,2.679,1.825,3.415c-0.673-0.021-1.305-0.206-1.859-0.513c0,0.017,0,0.034,0,0.052c0,1.988,1.414,3.647,3.292,4.023 c-0.344,0.094-0.707,0.144-1.081,0.144c-0.264,0-0.521-0.026-0.772-0.074c0.522,1.63,2.038,2.816,3.833,2.85 c-1.404,1.1-3.174,1.756-5.096,1.756c-0.331,0-0.658-0.019-0.979-0.057c1.816,1.164,3.973,1.843,6.29,1.843 c7.547,0,11.675-6.252,11.675-11.675c0-0.178-0.004-0.355-0.012-0.531C20.985,7.47,21.68,6.747,22.23,5.924z">
+																		</path>
+																	</svg><span class="wp-block-social-link-label screen-reader-text">Twitter</span></a>
+															</li>
+
+															<li style="color: #1D1D1F; "
+																class="wp-social-link wp-social-link-linkedin has-primary-color wp-block-social-link">
+																<a rel="noopener nofollow" target="_blank"
+																	href="https://linkedin.com/company/web-security-lab"
+																	title="Linkedin"
+																	class="wp-block-social-link-anchor"><svg width="24"
+																		height="24" viewBox="0 0 24 24" version="1.1"
+																		xmlns="http://www.w3.org/2000/svg"
+																		aria-hidden="true" focusable="false">
+																		<path
+																			d="M19.7,3H4.3C3.582,3,3,3.582,3,4.3v15.4C3,20.418,3.582,21,4.3,21h15.4c0.718,0,1.3-0.582,1.3-1.3V4.3 C21,3.582,20.418,3,19.7,3z M8.339,18.338H5.667v-8.59h2.672V18.338z M7.004,8.574c-0.857,0-1.549-0.694-1.549-1.548 c0-0.855,0.691-1.548,1.549-1.548c0.854,0,1.547,0.694,1.547,1.548C8.551,7.881,7.858,8.574,7.004,8.574z M18.339,18.338h-2.669 v-4.177c0-0.996-0.017-2.278-1.387-2.278c-1.389,0-1.601,1.086-1.601,2.206v4.249h-2.667v-8.59h2.559v1.174h0.037 c0.356-0.675,1.227-1.387,2.526-1.387c2.703,0,3.203,1.779,3.203,4.092V18.338z">
+																		</path>
+																	</svg><span class="wp-block-social-link-label screen-reader-text">LinkedIn</span></a>
+															</li>
+
+															<li style="color: #1D1D1F; "
+																class="wp-social-link wp-social-link-facebook has-primary-color wp-block-social-link">
+																<a rel="noopener nofollow" target="_blank"
+																	href="https://www.facebook.com/webseclab"
+																	title="Facebook"
+																	class="wp-block-social-link-anchor"><svg width="24"
+																		height="24" viewBox="0 0 24 24" version="1.1"
+																		xmlns="http://www.w3.org/2000/svg"
+																		aria-hidden="true" focusable="false">
+																		<path
+																			d="M12 2C6.5 2 2 6.5 2 12c0 5 3.7 9.1 8.4 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12c0-5.5-4.5-10-10-10z">
+																		</path>
+																	</svg><span class="wp-block-social-link-label screen-reader-text">Facebook</span></a>
+															</li>
+
+															<li style="color: #1D1D1F; "
+																class="wp-social-link wp-social-link-instagram has-primary-color wp-block-social-link">
+																<a rel="noopener nofollow" target="_blank"
+																	href="https://www.instagram.com/websecuritylab"
+																	title="Instagram"
+																	class="wp-block-social-link-anchor"><svg width="24"
+																		height="24" viewBox="0 0 24 24" version="1.1"
+																		xmlns="http://www.w3.org/2000/svg"
+																		aria-hidden="true" focusable="false">
+																		<path
+																			d="M12,4.622c2.403,0,2.688,0.009,3.637,0.052c0.877,0.04,1.354,0.187,1.671,0.31c0.42,0.163,0.72,0.358,1.035,0.673 c0.315,0.315,0.51,0.615,0.673,1.035c0.123,0.317,0.27,0.794,0.31,1.671c0.043,0.949,0.052,1.234,0.052,3.637 s-0.009,2.688-0.052,3.637c-0.04,0.877-0.187,1.354-0.31,1.671c-0.163,0.42-0.358,0.72-0.673,1.035 c-0.315,0.315-0.615,0.51-1.035,0.673c-0.317,0.123-0.794,0.27-1.671,0.31c-0.949,0.043-1.233,0.052-3.637,0.052 s-2.688-0.009-3.637-0.052c-0.877-0.04-1.354-0.187-1.671-0.31c-0.42-0.163-0.72-0.358-1.035-0.673 c-0.315-0.315-0.51-0.615-0.673-1.035c-0.123-0.317-0.27-0.794-0.31-1.671C4.631,14.688,4.622,14.403,4.622,12 s0.009-2.688,0.052-3.637c0.04-0.877,0.187-1.354,0.31-1.671c0.163-0.42,0.358-0.72,0.673-1.035 c0.315-0.315,0.615-0.51,1.035-0.673c0.317-0.123,0.794-0.27,1.671-0.31C9.312,4.631,9.597,4.622,12,4.622 M12,3 C9.556,3,9.249,3.01,8.289,3.054C7.331,3.098,6.677,3.25,6.105,3.472C5.513,3.702,5.011,4.01,4.511,4.511 c-0.5,0.5-0.808,1.002-1.038,1.594C3.25,6.677,3.098,7.331,3.054,8.289C3.01,9.249,3,9.556,3,12c0,2.444,0.01,2.751,0.054,3.711 c0.044,0.958,0.196,1.612,0.418,2.185c0.23,0.592,0.538,1.094,1.038,1.594c0.5,0.5,1.002,0.808,1.594,1.038 c0.572,0.222,1.227,0.375,2.185,0.418C9.249,20.99,9.556,21,12,21s2.751-0.01,3.711-0.054c0.958-0.044,1.612-0.196,2.185-0.418 c0.592-0.23,1.094-0.538,1.594-1.038c0.5-0.5,0.808-1.002,1.038-1.594c0.222-0.572,0.375-1.227,0.418-2.185 C20.99,14.751,21,14.444,21,12s-0.01-2.751-0.054-3.711c-0.044-0.958-0.196-1.612-0.418-2.185c-0.23-0.592-0.538-1.094-1.038-1.594 c-0.5-0.5-1.002-0.808-1.594-1.038c-0.572-0.222-1.227-0.375-2.185-0.418C14.751,3.01,14.444,3,12,3L12,3z M12,7.378 c-2.552,0-4.622,2.069-4.622,4.622S9.448,16.622,12,16.622s4.622-2.069,4.622-4.622S14.552,7.378,12,7.378z M12,15 c-1.657,0-3-1.343-3-3s1.343-3,3-3s3,1.343,3,3S13.657,15,12,15z M16.804,6.116c-0.596,0-1.08,0.484-1.08,1.08 s0.484,1.08,1.08,1.08c0.596,0,1.08-0.484,1.08-1.08S17.401,6.116,16.804,6.116z">
+																		</path>
+																	</svg><span class="wp-block-social-link-label screen-reader-text">Instagram</span></a>
+															</li>
+														</ul>
+											</div>
+										</div>
+									</div>
+									<div class="widget block-8 widget_block">
+										<div class="wp-block-group">
+											<div
+												class="wp-block-group__inner-container is-layout-constrained wp-block-group-is-layout-constrained">
+												<h2 class="wp-block-heading" id="h-featured-posts">Featured Posts</h2>
+
+
+												<ul
+													class="wp-block-latest-posts__list has-dates has-author is-style-cs-horizontal-layout wp-block-latest-posts">
+													<li>
+														<div class="wp-block-latest-posts__featured-image alignleft"><a
+																href="https://websecuritylab.org/australias-social-media-ban/"
+																aria-label="Australia’s Social Media Ban for Under-16s: A Bold Step for Child Safety or a Precedent for Ending Online Anonymity?"><img loading="lazy" decoding="async" width="150" height="150" src="https://websecuritylab.org/wp-content/uploads/2024/12/Social-Media-Ban-1-150x150.png" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Australia Social Media Ban" style="" srcset="https://websecuritylab.org/wp-content/uploads/2024/12/Social-Media-Ban-1-150x150.png 150w, https://websecuritylab.org/wp-content/uploads/2024/12/Social-Media-Ban-1-80x80.png 80w, https://websecuritylab.org/wp-content/uploads/2024/12/Social-Media-Ban-1-600x600.png 600w, https://websecuritylab.org/wp-content/uploads/2024/12/Social-Media-Ban-1-148x148.png 148w, https://websecuritylab.org/wp-content/uploads/2024/12/Social-Media-Ban-1-296x296.png 296w" sizes="auto, (max-width: 150px) 100vw, 150px" /></a>
+														</div><a class="wp-block-latest-posts__post-title"
+															href="https://websecuritylab.org/australias-social-media-ban/">Australia’s
+															Social Media Ban for Under-16s: A Bold Step for Child Safety
+															or a Precedent for Ending Online Anonymity?</a>
+														<div class="wp-block-latest-posts__post-author">by <a
+																href="https://websecuritylab.org/author/david-odes/">David
+																Odes</a></div><time datetime="2024-12-01T06:31:19+00:00"
+															class="wp-block-latest-posts__post-date">December 1,
+															2024</time>
+													</li>
+													<li>
+														<div class="wp-block-latest-posts__featured-image alignleft"><a
+																href="https://websecuritylab.org/cbn-implement-cybersecurity-levy-2024-2025/"
+																aria-label="Central Bank of Nigeria to Implement Controversial Cybersecurity Levy at Reduced Rate For 2024-2025"><img loading="lazy" decoding="async" width="150" height="150" src="https://websecuritylab.org/wp-content/uploads/2024/09/CBN-Levy-150x150.png" class="attachment-thumbnail size-thumbnail wp-post-image" alt="CBN Cybersecurity Levy" style="" srcset="https://websecuritylab.org/wp-content/uploads/2024/09/CBN-Levy-150x150.png 150w, https://websecuritylab.org/wp-content/uploads/2024/09/CBN-Levy-80x80.png 80w, https://websecuritylab.org/wp-content/uploads/2024/09/CBN-Levy-600x600.png 600w, https://websecuritylab.org/wp-content/uploads/2024/09/CBN-Levy-148x148.png 148w, https://websecuritylab.org/wp-content/uploads/2024/09/CBN-Levy-296x296.png 296w" sizes="auto, (max-width: 150px) 100vw, 150px" /></a>
+														</div><a class="wp-block-latest-posts__post-title"
+															href="https://websecuritylab.org/cbn-implement-cybersecurity-levy-2024-2025/">Central
+															Bank of Nigeria to Implement Controversial Cybersecurity
+															Levy at Reduced Rate For 2024-2025</a>
+														<div class="wp-block-latest-posts__post-author">by <a
+																href="https://websecuritylab.org/author/websecurity-ng/">Editorial
+																Team</a></div><time datetime="2024-09-18T08:30:18+00:00"
+															class="wp-block-latest-posts__post-date">September 18,
+															2024</time>
+													</li>
+													<li>
+														<div class="wp-block-latest-posts__featured-image alignleft"><a
+																href="https://websecuritylab.org/china-infiltrates-us-telecom-surveillance-system/"
+																aria-label="Chinese Hackers Infiltrate U.S. Telecommunications Surveillance Systems"><img loading="lazy" decoding="async" width="150" height="150" src="https://websecuritylab.org/wp-content/uploads/2024/10/China-Hacks-USA-Telecom-Infrastucture-150x150.webp" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" style="" srcset="https://websecuritylab.org/wp-content/uploads/2024/10/China-Hacks-USA-Telecom-Infrastucture-150x150.webp 150w, https://websecuritylab.org/wp-content/uploads/2024/10/China-Hacks-USA-Telecom-Infrastucture-80x80.webp 80w, https://websecuritylab.org/wp-content/uploads/2024/10/China-Hacks-USA-Telecom-Infrastucture-600x600.webp 600w, https://websecuritylab.org/wp-content/uploads/2024/10/China-Hacks-USA-Telecom-Infrastucture-148x148.webp 148w, https://websecuritylab.org/wp-content/uploads/2024/10/China-Hacks-USA-Telecom-Infrastucture-296x296.webp 296w" sizes="auto, (max-width: 150px) 100vw, 150px" /></a>
+														</div><a class="wp-block-latest-posts__post-title"
+															href="https://websecuritylab.org/china-infiltrates-us-telecom-surveillance-system/">Chinese
+															Hackers Infiltrate U.S. Telecommunications Surveillance
+															Systems</a>
+														<div class="wp-block-latest-posts__post-author">by <a
+																href="https://websecuritylab.org/author/david-odes/">David
+																Odes</a></div><time datetime="2024-10-06T11:13:56+00:00"
+															class="wp-block-latest-posts__post-date">October 6,
+															2024</time>
+													</li>
+													<li>
+														<div class="wp-block-latest-posts__featured-image alignleft"><a
+																href="https://websecuritylab.org/comptia-security-vs-cisco-cyberops/"
+																aria-label="CompTIA Security+ vs Cisco CyberOps: A Comprehensive Comparison"><img loading="lazy" decoding="async" width="150" height="150" src="https://websecuritylab.org/wp-content/uploads/2024/04/Security-vs-CyberOps-1024x683-1-150x150.png" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" style="" srcset="https://websecuritylab.org/wp-content/uploads/2024/04/Security-vs-CyberOps-1024x683-1-150x150.png 150w, https://websecuritylab.org/wp-content/uploads/2024/04/Security-vs-CyberOps-1024x683-1-148x148.png 148w, https://websecuritylab.org/wp-content/uploads/2024/04/Security-vs-CyberOps-1024x683-1-296x296.png 296w" sizes="auto, (max-width: 150px) 100vw, 150px" /></a>
+														</div><a class="wp-block-latest-posts__post-title"
+															href="https://websecuritylab.org/comptia-security-vs-cisco-cyberops/">CompTIA
+															Security+ vs Cisco CyberOps: A Comprehensive Comparison</a>
+														<div class="wp-block-latest-posts__post-author">by <a
+																href="https://websecuritylab.org/author/david-odes/">David
+																Odes</a></div><time datetime="2024-04-04T22:51:24+00:00"
+															class="wp-block-latest-posts__post-date">April 4,
+															2024</time>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="widget block-9 widget_block">
+										<div class="wp-block-group is-style-default">
+											<div
+												class="wp-block-group__inner-container is-layout-constrained wp-block-group-is-layout-constrained">
+												<h2 class="wp-block-heading is-style-default" id="h-explore-categories">
+													Explore Categories</h2>
+
+
+												<ul
+													class="wp-block-categories-list is-style-cs-tiles wp-block-categories">
+													<li class="cat-item cat-item-211"><a
+															href="https://websecuritylab.org/topics/cybercrime/">Cybercrime
+															<span>4</span></a>
+													</li>
+													<li class="cat-item cat-item-213"><a
+															href="https://websecuritylab.org/topics/data-breaches/">Data
+															Breaches <span>4</span></a>
+													</li>
+													<li class="cat-item cat-item-183"><a
+															href="https://websecuritylab.org/topics/data-protection/">Data
+															Protection <span>15</span></a>
+													</li>
+													<li class="cat-item cat-item-182"><a
+															href="https://websecuritylab.org/topics/ethical-hacking/">Ethical
+															Hacking <span>1</span></a>
+													</li>
+													<li class="cat-item cat-item-209"><a
+															href="https://websecuritylab.org/topics/operating-systems/linux/">Linux
+															<span>2</span></a>
+													</li>
+													<li class="cat-item cat-item-185"><a
+															href="https://websecuritylab.org/topics/networking/">Networking
+															<span>4</span></a>
+													</li>
+													<li class="cat-item cat-item-186"><a
+															href="https://websecuritylab.org/topics/operating-systems/">Operating
+															Systems <span>4</span></a>
+													</li>
+													<li class="cat-item cat-item-212"><a
+															href="https://websecuritylab.org/topics/opinion/">Opinion
+															<span>3</span></a>
+													</li>
+													<li class="cat-item cat-item-214"><a
+															href="https://websecuritylab.org/topics/reports/">Reports
+															<span>6</span></a>
+													</li>
+													<li class="cat-item cat-item-138"><a
+															href="https://websecuritylab.org/topics/resources/">Resources
+															<span>3</span></a>
+													</li>
+													<li class="cat-item cat-item-180"><a
+															href="https://websecuritylab.org/topics/threats-vulnerabilities/">Threats
+															&amp; Vulnerabilities <span>3</span></a>
+													</li>
+													<li class="cat-item cat-item-208"><a
+															href="https://websecuritylab.org/topics/operating-systems/windows/">Windows
+															<span>2</span></a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="widget block-19 widget_block">
+										<div class="wp-block-group is-style-cs-about">
+											<div
+												class="wp-block-group__inner-container is-layout-constrained wp-block-group-is-layout-constrained">
+												<p
+													class="has-primary-color has-text-color has-link-color has-medium-font-size">
+													<strong>Subscribe to our newsletter</strong></p>
+												<form
+													action="https://websecurity.us18.list-manage.com/subscribe/post?u=1ae11c87903bc7bc33a53f5f6&amp;id=2b82650ab2&amp;f_id=00830de1f0"
+													method="post" id="mc-embedded-subscribe-form"
+													name="mc-embedded-subscribe-form" class="validate" target="\_blank">
+													<p class="has-black-color has-text-color has-link-color">
+														<label>
+      <input type="email" name="EMAIL" placeholder="Your email address" required style="text-align: left;">
+    </label>
+													</p>
+													<p>
+														<label>
+      <input type="checkbox" name="terms" required>
+      I agree to the privacy policy and give my permission to process my personal data for email communication. </label>
+													</p>
+													<div class="wp-block-button">
+														<input type="submit" name="subscribe" id="mc-embedded-subscribe" class="wp-block-button\_\_link wp-element-button" value="Subscribe"></div>
+												</form>
+											</div>
+										</div>
+									</div>
+									<div class="widget block-21 widget_block widget_media_image">
+										<figure class="wp-block-image size-full is-resized is-style-rounded"><a
+												href="https://bit.ly/wslcommunity1"><img loading="lazy" decoding="async" width="906" height="1208" src="https://websecuritylab.org/wp-content/uploads/2024/08/Join-.png" alt="Join Our Community" class="wp-image-3223" style="object-fit:cover;width:300px;height:400px" srcset="https://websecuritylab.org/wp-content/uploads/2024/08/Join-.png 906w, https://websecuritylab.org/wp-content/uploads/2024/08/Join--225x300.png 225w, https://websecuritylab.org/wp-content/uploads/2024/08/Join--768x1024.png 768w, https://websecuritylab.org/wp-content/uploads/2024/08/Join--512x683.png 512w" sizes="auto, (max-width: 906px) 100vw, 906px" /></a>
+										</figure>
+									</div>
+
+								</div>
+							</aside>
+
+
+						</div>
+
+
+					</div>
+
+
+				</div>
+
+
+			</main>
+
+
+
+			<footer class="cs-footer">
+				<div class="cs-container">
+
+					<div class="cs-footer__item cs-footer__item-top-bar">
+						<div class="cs-footer__item-inner">
+							<div class="cs-footer__col cs-col-left">
+								<div class="cs-logo">
+									<a class="cs-footer__logo cs-logo-default" href="https://websecuritylab.org/">
+										<img src="https://websecuritylab.org/wp-content/uploads/2024/09/WSLBlk@2x.png"  alt="Web Security Lab"  width="213.82289416847"  height="60" >			</a>
+
+										<a class="cs-footer__logo cs-logo-dark" href="https://websecuritylab.org/">
+											<img src="https://websecuritylab.org/wp-content/uploads/2024/09/WhiteTestRun@2x.png"  alt="Web Security Lab"  width="213.82289416847"  height="60" >						</a>
+								</div>
+								<div class="cs-footer__desc">
+									Securing Tomorrow Together Through Education, Awareness, and Action </div>
+							</div>
+							<div class="cs-footer__col cs-col-center">
+								<div class="cs-footer__nav-menu">
+									<ul id="menu-footer" class="cs-footer__nav ">
+										<li id="menu-item-2599"
+											class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-2599">
+											<a href="https://websecuritylab.org">Home</a></li>
+										<li id="menu-item-2597"
+											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-2597">
+											<a rel="privacy-policy"
+												href="https://websecuritylab.org/privacy-policy/">Privacy Policy</a>
+										</li>
+										<li id="menu-item-2598"
+											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2598">
+											<a href="https://websecuritylab.org/contact-us/">Contact Us</a></li>
+										<li id="menu-item-2940"
+											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2940">
+											<a href="https://websecuritylab.org/about-us/">About Us</a></li>
+										<li id="menu-item-3219"
+											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3219">
+											<a href="https://websecuritylab.org/write-for-us/">Be a Contributor</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="cs-footer__col cs-col-right">
+								<div class="cs-social">
+									<a class="cs-social__link" href="/websecuritylab" target="_blank">
+										<img width="64" height="64" src="https://websecuritylab.org/wp-content/uploads/2024/03/demo-6-icon-twitter-new-0001@2x-1.webp"  alt="Twitter" >				</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="cs-footer__item cs-footer__item-bottom-bar">
+						<div class="cs-footer__item-inner">
+							<div class="cs-footer__copyright">
+								©️ 2024 — Web Security Lab. All Rights Reserved. </div>
+						</div>
+					</div>
+
+				</div>
+			</footer>
+
+			<button class="cs-scroll-top" role="button" aria-label="Scroll to top button">
+				<i class="cs-icon-chevron-up"></i>
+				<div class="cs-scroll-top-border">
+					<svg width="52" height="52" viewBox="0 0 52 52">
+						<path d="M26,2 a24,24 0 0,1 0,48 a24,24 0 0,1 0,-48" style="stroke-width: 2; fill: none;"></path>
+					</svg>
+				</div>
+				<div class="cs-scroll-top-progress">
+					<svg width="52" height="52" viewBox="0 0 52 52">
+						<path d="M26,2 a24,24 0 0,1 0,48 a24,24 0 0,1 0,-48" style="stroke-width: 2; fill: none;"></path>
+					</svg>
+				</div>
+			</button>
+
+
+		</div>
+
+
+	</div>
+
+
+
+	<style type="text/css" media="all" id="canvas-widget-blocks-dynamic-styles">
+
+	</style>
+	<div class="pk-mobile-share-overlay">
+	</div>
+	<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+	<script type="rocketlazyloadscript"
+		data-rocket-src="https://websecuritylab.org/wp-content/plugins/canvas/components/basic-elements/block-alert/public-block-alert.js?ver=2.4.7"
+		id="canvas-block-alert-script-js" defer></script>
+	<script type="rocketlazyloadscript"
+		data-rocket-src="https://websecuritylab.org/wp-content/plugins/canvas/components/basic-elements/block-collapsibles/public-block-collapsibles.js?ver=2.4.7"
+		id="canvas-block-collapsibles-script-js" defer></script>
+	<script type="rocketlazyloadscript"
+		data-rocket-src="https://websecuritylab.org/wp-content/plugins/canvas/components/basic-elements/block-tabs/public-block-tabs.js?ver=2.4.7"
+		id="canvas-block-tabs-script-js" defer></script>
+	<script type="rocketlazyloadscript"
+		data-rocket-src="https://websecuritylab.org/wp-content/plugins/canvas/components/posts/block-posts/colcade.js?ver=2.4.7"
+		id="colcade-js" defer></script>
+	<script type="rocketlazyloadscript"
+		data-rocket-src="https://websecuritylab.org/wp-content/plugins/canvas/components/posts/block-posts/public-block-posts.js?ver=2.4.7"
+		id="canvas-block-posts-script-js" defer></script>
+	<script type="rocketlazyloadscript"
+		data-rocket-src="https://websecuritylab.org/wp-content/plugins/canvas/components/justified-gallery/block/jquery.justifiedGallery.min.js?ver=2.4.7"
+		id="justifiedgallery-js" defer></script>
+	<script id="canvas-justified-gallery-js-extra">
+		var canvasJG = {"rtl":""};
+	</script>
+	<script type="rocketlazyloadscript"
+		data-rocket-src="https://websecuritylab.org/wp-content/plugins/canvas/components/justified-gallery/block/public-block-justified-gallery.js?ver=2.4.7"
+		id="canvas-justified-gallery-js" defer></script>
+	<script type="rocketlazyloadscript"
+		data-rocket-src="https://websecuritylab.org/wp-includes/js/imagesloaded.min.js?ver=5.0.0" id="imagesloaded-js"
+		defer></script>
+	<script type="rocketlazyloadscript"
+		data-rocket-src="https://websecuritylab.org/wp-content/plugins/canvas/components/slider-gallery/block/flickity.pkgd.min.js?ver=2.4.7"
+		id="flickity-js" defer></script>
+	<script id="canvas-slider-gallery-js-extra">
+		var canvas_sg_flickity = {"page_info_sep":" of "};
+	</script>
+	<script type="rocketlazyloadscript"
+		data-rocket-src="https://websecuritylab.org/wp-content/plugins/canvas/components/slider-gallery/block/public-block-slider-gallery.js?ver=2.4.7"
+		id="canvas-slider-gallery-js" defer></script>
+	<script type="rocketlazyloadscript"
+		data-rocket-src="https://websecuritylab.org/wp-content/plugins/powerkit/modules/basic-elements/public/js/public-powerkit-basic-elements.js?ver=4.0.0"
+		id="powerkit-basic-elements-js" defer></script>
+	<script id="powerkit-justified-gallery-js-extra">
+		var powerkitJG = {"rtl":""};
+	</script>
+	<script type="rocketlazyloadscript"
+		data-rocket-src="https://websecuritylab.org/wp-content/plugins/powerkit/modules/justified-gallery/public/js/public-powerkit-justified-gallery.js?ver=2.9.6"
+		id="powerkit-justified-gallery-js" defer></script>
+	<script type="rocketlazyloadscript"
+		data-rocket-src="https://websecuritylab.org/wp-content/plugins/powerkit/modules/lightbox/public/js/glightbox.min.js?ver=2.9.6"
+		id="glightbox-js" defer></script>
+	<script id="powerkit-lightbox-js-extra">
+		var powerkit_lightbox_localize = {"text_previous":"Previous","text_next":"Next","text_close":"Close","text_loading":"Loading","text_counter":"of","single_image_selectors":".entry-content img","gallery_selectors":".wp-block-gallery,.gallery","exclude_selectors":"","zoom_icon":"1"};
+	</script>
+	<script type="rocketlazyloadscript"
+		data-rocket-src="https://websecuritylab.org/wp-content/plugins/powerkit/modules/lightbox/public/js/public-powerkit-lightbox.js?ver=2.9.6"
+		id="powerkit-lightbox-js" defer></script>
+	<script id="powerkit-opt-in-forms-js-extra">
+		var opt_in = {"ajax_url":"https:\/\/websecuritylab.org\/wp-admin\/admin-ajax.php","warning_privacy":"Please confirm that you agree with our policies."};
+	</script>
+	<script type="rocketlazyloadscript"
+		data-rocket-src="https://websecuritylab.org/wp-content/plugins/powerkit/modules/opt-in-forms/public/js/public-powerkit-opt-in-forms.js?ver=2.9.6"
+		id="powerkit-opt-in-forms-js" defer></script>
+	<script type="rocketlazyloadscript"
+		data-rocket-src="https://websecuritylab.org/wp-content/plugins/powerkit/modules/share-buttons/public/js/public-powerkit-share-buttons.js?ver=2.9.6"
+		id="powerkit-share-buttons-js" defer></script>
+	<script id="powerkit-slider-gallery-js-extra">
+		var powerkit_sg_flickity = {"page_info_sep":" of "};
+	</script>
+	<script type="rocketlazyloadscript"
+		data-rocket-src="https://websecuritylab.org/wp-content/plugins/powerkit/modules/slider-gallery/public/js/public-powerkit-slider-gallery.js?ver=2.9.6"
+		id="powerkit-slider-gallery-js" defer></script>
+	<script id="powerkit-table-of-contents-js-extra">
+		var powerkit_toc_config = {"label_show":"Show","label_hide":"Hide"};
+	</script>
+	<script type="rocketlazyloadscript"
+		data-rocket-src="https://websecuritylab.org/wp-content/plugins/powerkit/modules/table-of-contents/public/js/public-powerkit-table-of-contents.js?ver=2.9.6"
+		id="powerkit-table-of-contents-js" defer></script>
+	<script type="rocketlazyloadscript" id="rocket-browser-checker-js-after">
+		"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+	<script id="rocket-preload-links-js-extra">
+		var RocketPreloadLinksConfig = {"excludeUris":"\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index.php\/)?(.*)wp-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/websecuritylab.org","onHoverDelay":"100","rateThrottle":"3"};
+	</script>
+	<script type="rocketlazyloadscript" id="rocket-preload-links-js-after">
+		(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+	<script id="rocket_lazyload_css-js-extra">
+		var rocket_lazyload_css_data = {"threshold":"300"};
+	</script>
+	<script id="rocket_lazyload_css-js-after">
+		!function o(n,c,a){function s(t,e){if(!c[t]){if(!n[t]){var r="function"==typeof require&&require;if(!e&&r)return r(t,!0);if(u)return u(t,!0);throw(r=new Error("Cannot find module '"+t+"'")).code="MODULE_NOT_FOUND",r}r=c[t]={exports:{}},n[t][0].call(r.exports,function(e){return s(n[t][1][e]||e)},r,r.exports,o,n,c,a)}return c[t].exports}for(var u="function"==typeof require&&require,e=0;e<a.length;e++)s(a[e]);return s}({1:[function(e,t,r){"use strict";!function(){const r="undefined"==typeof rocket_pairs?[]:rocket_pairs,e="undefined"==typeof rocket_excluded_pairs?[]:rocket_excluded_pairs;e.map(t=>{var e=t.selector;const r=document.querySelectorAll(e);r.forEach(e=>{e.setAttribute("data-rocket-lazy-bg-".concat(t.hash),"excluded")})});const o=document.querySelector("#wpr-lazyload-bg-container");var t=rocket_lazyload_css_data.threshold||300;const n=new IntersectionObserver(e=>{e.forEach(t=>{if(t.isIntersecting){const e=r.filter(e=>t.target.matches(e.selector));e.map(t=>{var e;t&&((e=document.createElement("style")).textContent=t.style,o.insertAdjacentElement("afterend",e),t.elements.forEach(e=>{n.unobserve(e),e.setAttribute("data-rocket-lazy-bg-".concat(t.hash),"loaded")}))})}})},{rootMargin:t+"px"});function c(){0<(0<arguments.length&&void 0!==arguments[0]?arguments[0]:[]).length&&r.forEach(t=>{try{const e=document.querySelectorAll(t.selector);e.forEach(e=>{"loaded"!==e.getAttribute("data-rocket-lazy-bg-".concat(t.hash))&&"excluded"!==e.getAttribute("data-rocket-lazy-bg-".concat(t.hash))&&(n.observe(e),(t.elements||(t.elements=[])).push(e))})}catch(e){console.error(e)}})}c();const a=function(){const o=window.MutationObserver;return function(e,t){if(e&&1===e.nodeType){const r=new o(t);return r.observe(e,{attributes:!0,childList:!0,subtree:!0}),r}}}();t=document.querySelector("body"),a(t,c)}()},{}]},{},[1]);
+//# sourceMappingURL=lazyload-css.min.js.map
+	</script>
+	<script id="csco-scripts-js-extra">
+		var csLocalize = {"siteSchemeMode":"dark","siteSchemeToogle":"1"};
+	</script>
+	<script type="rocketlazyloadscript"
+		data-rocket-src="https://websecuritylab.org/wp-content/themes/swyft/assets/js/scripts.js?ver=1.0.4"
+		id="csco-scripts-js" defer></script>
+	<script type="rocketlazyloadscript"
+		data-rocket-src="https://websecuritylab.org/wp-content/themes/swyft/assets/static/js/comment-reply.js?ver=1.0.4"
+		id="csco-comment-reply-js" defer></script>
+	<script type="rocketlazyloadscript" data-rocket-type="text/javascript">window.addEventListener('DOMContentLoaded', function() {
+		"use strict";
+
+		(function($) {
+
+			$( window ).on( 'load', function() {
+
+				// Each All Share boxes.
+				$( '.pk-share-buttons-mode-rest' ).each( function() {
+
+					var powerkitButtonsIds = [],
+						powerkitButtonsBox = $( this );
+
+					// Check Counts.
+					if ( ! powerkitButtonsBox.hasClass( 'pk-share-buttons-has-counts' ) && ! powerkitButtonsBox.hasClass( 'pk-share-buttons-has-total-counts' ) ) {
+						return;
+					}
+
+					powerkitButtonsBox.find( '.pk-share-buttons-item' ).each( function() {
+						if ( $( this ).attr( 'data-id' ).length > 0 ) {
+							powerkitButtonsIds.push( $( this ).attr( 'data-id' ) );
+						}
+					});
+
+					// Generate accounts data.
+					var powerkitButtonsData = {};
+
+					if( powerkitButtonsIds.length > 0 ) {
+						powerkitButtonsData = {
+							'ids'     : powerkitButtonsIds.join(),
+							'post_id' : powerkitButtonsBox.attr( 'data-post-id' ),
+							'url'     : powerkitButtonsBox.attr( 'data-share-url' ),
+						};
+					}
+
+					// Get results by REST API.
+					$.ajax({
+						type: 'GET',
+						url: 'https://websecuritylab.org/wp-json/social-share/v1/get-shares',
+						data: powerkitButtonsData,
+						beforeSend: function(){
+
+							// Add Loading Class.
+							powerkitButtonsBox.addClass( 'pk-share-buttons-loading' );
+						},
+						success: function( response ) {
+
+							if ( ! $.isEmptyObject( response ) && ! response.hasOwnProperty( 'code' ) ) {
+
+								// Accounts loop.
+								$.each( response, function( index, data ) {
+
+									if ( index !== 'total_count' ) {
+
+										// Find Bsa Item.
+										var powerkitButtonsItem = powerkitButtonsBox.find( '.pk-share-buttons-item[data-id="' + index + '"]');
+
+										// Set Count.
+										if ( data.hasOwnProperty( 'count' ) && data.count  ) {
+
+											powerkitButtonsItem.removeClass( 'pk-share-buttons-no-count' ).addClass( 'pk-share-buttons-item-count' );
+											powerkitButtonsItem.find( '.pk-share-buttons-count' ).html( data.count );
+
+										} else {
+											powerkitButtonsItem.addClass( 'pk-share-buttons-no-count' );
+										}
+									}
+								});
+
+								if ( powerkitButtonsBox.hasClass( 'pk-share-buttons-has-total-counts' ) && response.hasOwnProperty( 'total_count' ) ) {
+									var powerkitButtonsTotalBox = powerkitButtonsBox.find( '.pk-share-buttons-total' );
+
+									if ( response.total_count ) {
+										powerkitButtonsTotalBox.find( '.pk-share-buttons-count' ).html( response.total_count );
+										powerkitButtonsTotalBox.show().removeClass( 'pk-share-buttons-total-no-count' );
+									}
+								}
+							}
+
+							// Remove Loading Class.
+							powerkitButtonsBox.removeClass( 'pk-share-buttons-loading' );
+						},
+						error: function() {
+
+							// Remove Loading Class.
+							powerkitButtonsBox.removeClass( 'pk-share-buttons-loading' );
+						}
+					});
+				});
+			});
+
+		})(jQuery);
+	});</script>
+
+</body>
+
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1745564519 -->
