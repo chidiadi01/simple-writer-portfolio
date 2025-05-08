@@ -1,63 +1,25 @@
 "use client";
 
 import { useEffect, useState } from 'react';
-import { getPublishedDate } from '.src/utils/getPublishedDate';
-import { getTitle } from '.src/utils/getTitle';
-import { getImageURL } from '.src/utils/getImageURL';
-import { getDescription } from '.src/utils/getDescription';
 import ArticleCard, { Article } from './ArticleCard';
-import articleFile from '.src/app/articles.json';
-import { getPlatform } from '.src/utils/getPlatform';
+
 
 
 interface MainBodyProps {
   searchTerm: string;
+  articles: Article[];
+  setArticles: React.Dispatch<React.SetStateAction<Article[]>>;
 }
 
 
-export default function MainBody({ searchTerm }: MainBodyProps) {
+export default function MainBody({ searchTerm, articles }: MainBodyProps) {
   // Get articles from JSON file and create array of article objects
 
-  const [articles, setArticles] = useState<Article[]>([]);
   const [filteredArticles, setFilteredArticles] = useState<Article[]>([]);
   
   const tags = ["Networking", "Cloud", "DevOps", "Web Dev", "Cybersecurity"];
   const [isActive, setIsActive] = useState(tags.map(() => false));
 
-
-  // Fetch data and set articles
-  useEffect(() => {
-    const fetchData = async () => {
-      const results = await Promise.all(
-        articleFile.articles.map(async (item) => {
-          const res = await fetch(`/api/metadata?url=${encodeURIComponent(item.url || '')}`);
-          const data = await res.json();
-
-          return {
-            ...item,
-            id: item.id ?? 0,
-            tags: item.tags ?? [],
-            title: getTitle(data) || item.title || 'No title',
-            description: item.description  || getDescription(data) || 'No description',
-            publishedDate: getPublishedDate(data) ?? 'No date',
-            imgUrl: getImageURL(data) || item.image || '/img-2.jpg',
-            siteName: getPlatform(data) || data.metadata?.publisher?.name || 'Unknown site',
-            url: item.url || '',
-          };
-        })
-      );
-
-      const sortedResults = results.sort((a, b) => {
-        const dateA = new Date(a.publishedDate || '').getTime();
-        const dateB = new Date(b.publishedDate || '').getTime();
-        return dateB - dateA; // Sort in descending order
-      });
-
-      setArticles(sortedResults);
-    };
-
-    fetchData();
-  }, []); 
 
   // Filter articles based on search term and active tags
   useEffect(() => {
@@ -114,7 +76,7 @@ export default function MainBody({ searchTerm }: MainBodyProps) {
         ))}
       </div>
 
-      <div id="articlegrid" className="w-[100vw] md:w-[98vw] grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 px-3 py-3">
+      <div id="articlegrid" className="w-[100vw] md:w-[98vw] grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-5 px-3 py-3">
         <ArticleCard articles={filteredArticles} />
       </div>
     </div>

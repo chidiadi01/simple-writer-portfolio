@@ -25,7 +25,7 @@ export default function Hero({ searchTerm, setSearchTerm }: HeroProps) {
             <div id="searchbar" className="h-9xl mt-4 flex align-items-center justify-center w-full" >
 
                 <form onSubmit={(e) => {e.preventDefault();  setSearchTerm(searchTerm);}} className="group mt-4 relative w-[70%] md:w-[50%]">
-                    <input  value={searchTerm} onChange={(e) => setSearchTerm(e.target.value) } onFocus={()=>{setButtonColor('bg-blue-500'); console.log('input focused')}} onBlur={()=>{setButtonColor('');}}type="search" placeholder="Search Chidiadi's articles" className="h-[50px] w-full px-[48px] border-3 border-blue-300 rounded-[25px] focus:outline-none focus:border-blue-500 bg-white"/>
+                    <input  value={searchTerm} onChange={(e) => setSearchTerm(e.target.value) } onFocus={()=>{setButtonColor('bg-blue-500'); console.log('input focused')}} onBlur={()=>{setButtonColor('');}}type="search" placeholder="Search Chidiadi's articles" className="h-[50px] w-full px-[48px] border-3 border-blue-300 rounded-[25px] focus:outline-none focus:border-blue-500 text-black bg-white"/>
                     <button className={`h-[42px] w-[42px] absolute right-0 mr-1.5 mt-1 rounded-[50%] bg-blue-300 ${buttonColor}`}>
                         <Search  className='m-auto text-white'/>
                     </button>

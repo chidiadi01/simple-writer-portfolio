@@ -1,22 +1,11 @@
-'use client';
 
-import Footer from ".src/components/footer";
-import Hero from ".src/components/hero";
-import MainBody from ".src/components/mainbody";
-import { useState } from "react";
+import { fetchArticles } from '../utils/fetchArticles';
+import HomeClient from './HomeClient';
 
-export default function Home() {
+export const revalidate = 3600;
 
-  const [searchTerm, setSearchTerm] = useState<string>('');
+export default async function Page() {
+  const articles = await fetchArticles(); 
 
-  return (
-         <>
-         <div>
-         <Hero searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-         <MainBody searchTerm={searchTerm} />
-         <Footer /> 
-          
-         </div>
-         </>
-  );
+  return <HomeClient initialArticles={articles} />;
 }
