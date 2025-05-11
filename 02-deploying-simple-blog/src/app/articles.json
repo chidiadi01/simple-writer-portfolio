@@ -1,0 +1,228 @@
+{
+    "articles": [
+        {
+            "id": 1,
+            "url": "https://thenetworkbits.substack.com/p/an-overview-of-json",
+            "tags": ["Web Dev", "DevOps", "Cloud"],
+            "title": "",
+            "description": "",
+            "image": ""
+        },
+        {
+            "id": 2,
+            "url": "https://websecuritylab.org/how-safe-is-public-wi-fi-a-network-engineer-explains/",
+            "tags": ["Networking", "Cybersecurity"],
+            "title": "",
+            "description": "",
+            "image": ""
+        },
+        {
+            "id": 3,
+            "url": "https://www.freecodecamp.org/news/automate-cicd-with-github-actions-streamline-workflow/",
+            "tags": ["DevOps"],
+            "title": "",
+            "description": "",
+            "image": ""
+        },
+        {
+            "id": 4,
+            "url": "https://www.freecodecamp.org/news/ecs-monitoring-explained-with-examples/",
+            "tags": ["DevOps", "Cloud"],
+            "title": "",
+            "description": "",
+            "image": ""
+        },
+        {
+            "id": 5,
+            "url": "https://www.freecodecamp.org/news/shells-a-history-of-human-computer-interfaces/",
+            "tags": ["DevOps"],
+            "title": "",
+            "description": "",
+            "image": ""
+        },
+        {
+            "id": 6,
+            "url": "https://www.freecodecamp.org/news/a-deep-dive-into-access-control-lists/",
+            "tags": ["Networking", "Cybersecurity", "Cloud"],
+            "title": "",
+            "description": "",
+            "image": ""
+        },
+        {
+            "id": 7,
+            "url": "https://www.linkedin.com/pulse/dns-deep-dive-chidiadi-anyanwu/",
+            "tags": ["Networking", "Cloud", "DevOps"],
+            "title": "How Domain Name System (DNS) Works",
+            "description": "DNS is something the internet lives and breathes on. It is one of the fundamental technologies that makes our present internet possible and usable.",
+            "image": "https://media.licdn.com/dms/image/v2/D4D12AQEBwYFaOnx7Mg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1678372132692?e=2147483647&amp;v=beta&amp;t=zBJhItDUeQRcd40LQpuahpZQyD2EdcVPYQD5dr4QfWw"
+        },
+        {
+            "id": 8,
+            "url": "https://www.linkedin.com/pulse/http-network-protocol-chidiadi-anyanwu/",
+            "tags": ["Networking", "Cybersecurity", "Web Dev"],
+            "title": "Is HTTP A Network Protocol?",
+            "description": "What is the difference between the web and the internet, or isn't it just two interchangeable names for the same thing? What is the difference between HTTP and HTTPS? What happens when I visit a website?",
+            "image": "https://static.licdn.com/scds/common/u/images/email/artdeco/logos/96/linkedin-bug-color.png"
+        },
+        {
+            "id": 9,
+            "url": "https://www.linkedin.com/pulse/http-networking-protocol-pt-2-evolution-chidiadi-anyanwu/",
+            "tags": ["Networking", "Cybersecurity", "Web Dev"],
+            "title": "Is HTTP A Networking Protocol (Pt 2) - The Evolution of HTTP",
+            "description": "In the last article, we introduced HTTP, talked about its working principle, methods and status codes. Now, we want to dig deeper into the HTTP protocol, its evolution and frame structure.",
+            "image": "https://static.licdn.com/scds/common/u/images/email/artdeco/logos/96/linkedin-bug-color.png"
+        },
+        {
+            "id": 10,
+            "url": "https://thenetworkbits.substack.com/p/what-is-vlan-hopping-and-how-does",
+            "tags": ["Networking", "Cybersecurity"],
+            "title": "",
+            "description": "",
+            "image": ""
+        },
+        {
+            "id": 11,
+            "url": "https://thenetworkbits.substack.com/p/arp-poisoning",
+            "tags": ["Networking", "Cybersecurity"],
+            "title": "",
+            "description": "",
+            "image": ""
+        },
+        {
+            "id": 12,
+            "url": "https://thenetworkbits.substack.com/p/route-tables-cloud-and-networking",
+            "tags": ["Networking", "Cloud"],
+            "title": "",
+            "description": "",
+            "image": ""
+        },
+        {
+            "id": 13,
+            "url": "https://thenetworkbits.substack.com/p/subnets-cloud-vs-networking",
+            "tags": ["Networking", "Cloud"],
+            "title": "",
+            "description": "",
+            "image": ""
+        },
+        {
+            "id": 14,
+            "url": "https://www.linkedin.com/pulse/ip-addressing-chidiadi-anyanwu/",
+            "tags": ["Networking"],
+            "title": "",
+            "description": "",
+            "image": ""
+        },
+        {
+            "id": 15,
+            "url": "https://www.linkedin.com/pulse/why-called-root-bridge-switch-spanning-tree-protocol-chidiadi-anyanwu/",
+            "tags": ["Networking"],
+            "title": "",
+            "description": "",
+            "image": ""
+        },
+        {
+            "id": 16,
+            "url": "https://www.linkedin.com/pulse/virtual-local-area-network-vlan-chidiadi-anyanwu/",
+            "tags": ["Networking"],
+            "title": "",
+            "description": "",
+            "image": ""
+        },
+        {
+            "id": 17,
+            "url": "https://www.linkedin.com/pulse/why-non-techies-can-access-internet-dynamic-host-protocol-anyanwu/",
+            "tags": ["Networking"],
+            "title": "",
+            "description": "",
+            "image": ""
+        },
+        {
+            "id": 18,
+            "url": "https://www.linkedin.com/pulse/common-nameless-network-protocol-chidiadi-anyanwu/",
+            "tags": ["Networking", "DevOps", "Cloud"],
+            "title": "",
+            "description": "",
+            "image": ""
+        },
+        {
+            "id": 19,
+            "url": "https://www.linkedin.com/pulse/vpn-technologies-generic-routing-encapsulation-gre-chidiadi-anyanwu/",
+            "tags": ["Networking", "Cybersecurity"],
+            "title": "",
+            "description": "",
+            "image": ""
+        },
+        {
+            "id": 20,
+            "url": "https://www.linkedin.com/pulse/vpn-technologies-ipsec-chidiadi-anyanwu/",
+            "tags": ["Networking", "Cybersecurity"],
+            "title": "",
+            "description": "",
+            "image": ""
+        },
+        {
+            "id": 21,
+            "url": "https://www.linkedin.com/pulse/point-to-point-protocol-chidiadi-anyanwu/",
+            "tags": ["Networking"],
+            "title": "",
+            "description": "",
+            "image": ""
+        },
+        {
+            "id": 22,
+            "url": "https://www.linkedin.com/pulse/de-jargon-ification-some-networking-terms-chidiadi-anyanwu/",
+            "tags": ["Networking"],
+            "title": "",
+            "description": "",
+            "image": ""
+        },
+        {
+            "id": 23,
+            "url": "https://www.linkedin.com/pulse/osi-reference-model-pt-3-upper-layers-tcpip-chidiadi-anyanwu/",
+            "tags": ["Networking", "Cybersecurity"],
+            "title": "",
+            "description": "",
+            "image": ""
+        },
+        {
+            "id": 24,
+            "url": "https://www.linkedin.com/pulse/osi-model-pt-2-lower-layers-chidiadi-anyanwu/",
+            "tags": ["Networking", "Cybersecurity"],
+            "title": "",
+            "description": "",
+            "image": ""
+        },
+        {
+            "id": 25,
+            "url": "https://www.linkedin.com/pulse/osi-reference-model-pt1-chidiadi-anyanwu/",
+            "tags": ["Networking", "Cybersecurity"],
+            "title": "",
+            "description": "",
+            "image": ""
+        },
+        {
+            "id": 26,
+            "url": "https://www.linkedin.com/pulse/what-routing-switching-chidiadi-anyanwu/",
+            "tags": ["Networking"],
+            "title": "",
+            "description": "",
+            "image": ""
+        },
+        {
+            "id": 27,
+            "url": "https://www.linkedin.com/pulse/command-line-interface-chidiadi-anyanwu/",
+            "tags": ["Networking", "Cybersecurity", "DevOps", "Cloud", "Web Dev"],
+            "title": "",
+            "description": "",
+            "image": ""
+        },
+        {
+            "id": 28,
+            "url": "https://www.linkedin.com/pulse/5-things-know-network-engineering-beginner-chidiadi-anyanwu/",
+            "tags": ["Networking"],
+            "title": "",
+            "description": "",
+            "image": ""
+        }
+    ]
+}
