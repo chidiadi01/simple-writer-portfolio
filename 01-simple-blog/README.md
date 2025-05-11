@@ -14,11 +14,13 @@ Because I have written articles on different platforms including LinkedIn, my su
 
 3. When testing the extraction of necessary information from the query response, I found out that not all platforms had all the Open Graph metadata I wanted. So, I resorted to using a more hybrid approach of checking both Open Graph metadata and JSON-LD data in the HTML file.
 
+4. The article grid loaded very slowly, as it started fetching data from the URLs just as the MainBody component mounted. Imagine I had 100 articles to load and I had to wait for the process to finish. What I did was to refactor the code, so that the articles are fetched at build time instead of upon user request. Then, they are revalidated every onw hour. That way, the users can have a better and faster experience.
+
 ## Project Structure
 
 Here is what the project file structure looks like:
 
-![Project File Structure](fileSturcture.jpg)
+![Project File Structure](file-structure.png)
 
 In the root folder, we have the `public` and `src` folders. All the images and icons used in the project are in the public folder. The `src` folder has the `app`, `components`, and `utils` folders. The `app` folder is the main folder where the first `page.tsx` and `layout.tsx` folders are located. It also has the JSON file for the articles, and the `api` folder which houses the Route Handlers. With the App Router, you do not need to put your `route.ts` or `route.js` file inside the `api` folder. Just make sure it's somewhere in the `app` directory that does not have a `page` file.
 

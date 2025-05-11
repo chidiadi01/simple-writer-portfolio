@@ -8,7 +8,6 @@ import ArticleCard, { Article } from './ArticleCard';
 interface MainBodyProps {
   searchTerm: string;
   articles: Article[];
-  setArticles: React.Dispatch<React.SetStateAction<Article[]>>;
 }
 
 
