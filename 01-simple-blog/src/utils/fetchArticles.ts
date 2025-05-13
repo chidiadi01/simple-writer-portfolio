@@ -8,17 +8,27 @@ import { Article } from '../components/ArticleCard';
 import { getMetadataFromURL } from './getMetadataFromURL';
 
 export async function fetchArticles(): Promise<Article[]> {
-    console.log('Fetching articles...');
+  console.log('Fetching articles...');
   const results = await Promise.all(
     articleFile.articles.map(async (item) => {
-           
       let data;
       try {
         const res = await getMetadataFromURL(item.url);
         data = res;
       } catch (error) {
         console.error(`Failed to fetch metadata for URL: ${item.url}`, error);
-        return null;
+        // Return a default article object on failure
+        return {
+          ...item,
+          id: item.id ?? 0,
+          tags: item.tags ?? [],
+          title: item.title || 'No title',
+          description: item.description || 'No description',
+          publishedDate: 'No date',
+          imgUrl: '/img-2.jpg',
+          siteName: 'Unknown site',
+          url: item.url || '',
+        };
       }
 
       return {
@@ -29,7 +39,7 @@ export async function fetchArticles(): Promise<Article[]> {
         description: item.description || getDescription(data) || 'No description',
         publishedDate: getPublishedDate(data) ?? 'No date',
         imgUrl: getImageURL(data) || item.image || '/img-2.jpg',
-        siteName: getPlatform(data) || data.metadata?.publisher?.name || 'Unknown site',
+        siteName: getPlatform(data) || data?.metadata?.publisher?.name || 'Unknown site',
         url: item.url || '',
       };
     })
