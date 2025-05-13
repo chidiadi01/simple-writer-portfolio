@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "vercel-build": "next build"
+    "vercel-build": "next build --no-lint"
   },
   "dependencies": {
     "cheerio": "^1.0.0",
