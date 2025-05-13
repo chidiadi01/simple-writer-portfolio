@@ -5,15 +5,21 @@ import { getDescription } from './getDescription';
 import { getPlatform } from './getPlatform';
 import articleFile from '../app/articles.json';
 import { Article } from '../components/ArticleCard';
+import { getMetadataFromURL } from './getMetadataFromURL';
 
 export async function fetchArticles(): Promise<Article[]> {
     console.log('Fetching articles...');
   const results = await Promise.all(
     articleFile.articles.map(async (item) => {
-      
-      const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';        
-      const res = await fetch(`${baseUrl}/api/metadata?url=${encodeURIComponent(item.url || '')}`);
-      const data = await res.json();
+           
+      let data;
+      try {
+        const res = await getMetadataFromURL(item.url);
+        data = res;
+      } catch (error) {
+        console.error(`Failed to fetch metadata for URL: ${item.url}`, error);
+        return null;
+      }
 
       return {
         ...item,
