@@ -5,7 +5,7 @@ import { getDescription } from './getDescription';
 import { getPlatform } from './getPlatform';
 import articleFile from '../app/articles.json';
 import { Article } from '../components/ArticleCard';
-import { getMetadataFromURL } from './getMetadataFromURL';
+import * as cheerio from 'cheerio';
 
 export async function fetchArticles(): Promise<Article[]> {
   console.log('Fetching articles...');
@@ -13,8 +13,20 @@ export async function fetchArticles(): Promise<Article[]> {
     articleFile.articles.map(async (item) => {
       let data;
       try {
-        const res = await getMetadataFromURL(item.url);
-        data = res;
+        // Fetch metadata and HTML from URL
+        const response = await fetch(item.url);
+        const html = await response.text();
+        const $ = cheerio.load(html);
+        const jsonScript = $('script[type="application/ld+json"]').html();
+
+        if (!jsonScript) {
+          throw new Error('No JSON-LD script found on page');
+        }
+
+        const metadata = JSON.parse(jsonScript);
+
+        // Combine metadata and HTML into a single object
+        data = { metadata, html };
       } catch (error) {
         console.error(`Failed to fetch metadata for URL: ${item.url}`, error);
         // Return a default article object on failure
@@ -31,6 +43,7 @@ export async function fetchArticles(): Promise<Article[]> {
         };
       }
 
+      // Use the combined data (metadata and HTML) to construct the article object
       return {
         ...item,
         id: item.id ?? 0,
@@ -39,7 +52,7 @@ export async function fetchArticles(): Promise<Article[]> {
         description: item.description || getDescription(data) || 'No description',
         publishedDate: getPublishedDate(data) ?? 'No date',
         imgUrl: getImageURL(data) || item.image || '/img-2.jpg',
-        siteName: getPlatform(data) || data?.metadata?.publisher?.name || 'Unknown site',
+        siteName: getPlatform(data) || data.metadata?.publisher?.name || 'Unknown site',
         url: item.url || '',
       };
     })
