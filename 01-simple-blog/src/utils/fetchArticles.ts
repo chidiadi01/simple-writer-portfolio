@@ -20,7 +20,7 @@ export async function fetchArticles(): Promise<Article[]> {
         const jsonScript = $('script[type="application/ld+json"]').html();
 
         if (!jsonScript) {
-          throw new Error('No JSON-LD script found on page');
+            console.log(`No JSON-LD script found for URL: ${item.url}`);
         }
 
         const metadata = JSON.parse(jsonScript);
