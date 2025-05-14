@@ -13,14 +13,20 @@ export async function fetchArticles(): Promise<Article[]> {
     articleFile.articles.map(async (item) => {
       let data;
       try {
-        // Fetch metadata and HTML from URL
+        // Fetch metadata and HTML from the URL
         const response = await fetch(item.url);
+
+        if (!response.ok) {
+          console.error(`HTTP error! Status: ${response.status} for URL: ${item.url}`);
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        
         const html = await response.text();
         const $ = cheerio.load(html);
         const jsonScript = $('script[type="application/ld+json"]').html();
 
         if (!jsonScript) {
-            console.log(`No JSON-LD script found for URL: ${item.url}`);
+          throw new Error('No JSON-LD script found on page');
         }
 
         const metadata = JSON.parse(jsonScript);
