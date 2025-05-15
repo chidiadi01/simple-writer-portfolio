@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { fetchArticles } from '../utils/fetchArticles';
 import HomeClient from './HomeClient';
