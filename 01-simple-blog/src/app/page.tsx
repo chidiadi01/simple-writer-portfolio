@@ -1,5 +1,14 @@
 'use client';
 
+import { getPublishedDate } from '../utils/getPublishedDate';
+import { getTitle } from '../utils/getTitle';
+import { getImageURL } from '../utils/getImageURL';
+import { getDescription } from '../utils/getDescription';
+import { getPlatform } from '../utils/getPlatform';
+import articleFile from './articles.json';
+import { Article } from '../components/ArticleCard';
+import * as cheerio from 'cheerio';
+
 //import { fetchArticles } from '../utils/fetchArticles';
 import HomeClient from './HomeClient';
 
