@@ -22,7 +22,7 @@ const ArticleCard = ({ articles }: ArticleProps) => {
       {articles && articles.length > 0 ? (
         articles.map((item, id) => (
           // Anchor tag for the link
-          <a key={id} href={item.url} className="max-w-[350px] mx-auto mb-5">
+          <a key={id} href={item.url || '#'} className="max-w-[350px] mx-auto mb-5">
             <div
               className="sm:w-[350px] hover:brightness-70"
               data-title={item.title}
