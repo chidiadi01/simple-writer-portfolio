@@ -77,4 +77,5 @@ export async function fetchArticles(): Promise<Article[]> {
     const dateB = new Date(b.publishedDate || '').getTime();
     return dateB - dateA;
   });
+  console.log(results);
 }
