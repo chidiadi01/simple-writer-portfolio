@@ -48,9 +48,11 @@ const ArticleCard = ({ articles }: ArticleProps) => {
       )))
       :
 
-      ( Array(6).fill(0).map((item, id) => (
+      'LOADING . . .'
+
+      {/* ( Array(6).fill(0).map((item, id) => (
         <div key={id} className="w-full md:w-[350px] h-[350px] bg-gray-500 mx-auto mb-5 hover:brightness-80 rounded-[10px] animate-pulse"></div>
-      )))
+      ))) */}
     }
     </>
   );
