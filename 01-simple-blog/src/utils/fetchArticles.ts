@@ -9,10 +9,19 @@ import * as cheerio from 'cheerio';
 
 export async function fetchArticles(): Promise<Article[]> {
   console.log('Fetching articles...');
+  const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
   const results = await Promise.all(
     articleFile.articles.map(async (item) => {
+      if (!item.url || typeof item.url !== 'string' || item.url.trim() === '') {
+        console.warn(`Invalid URL: ${item.url}`);
+        return null; // Skip this item
+      }
+
       let data;
       try {
+        // Delay for 1 second between requests
+        await delay(1000);
+
         // Fetch metadata and HTML from the URL
         const response = await fetch(item.url, {
           headers: {
