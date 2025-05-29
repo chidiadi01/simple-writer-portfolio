@@ -52,7 +52,9 @@ export default function MainBody({ searchTerm, articles }: MainBodyProps) {
     setFilteredArticles(filtered);
   }, [articles, searchTerm, isActive]); 
 
-  console.log(filteredArticles);
+  console.log('Articles: ' + articles);
+
+  console.log('Filtered articles: ' + filteredArticles);
 
   return (
     <div className='scroll-smooth'>

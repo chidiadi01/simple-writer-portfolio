@@ -9,18 +9,15 @@ import * as cheerio from 'cheerio';
 
 export async function fetchArticles(): Promise<Article[]> {
   console.log('Fetching articles...');
-  const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
   const results = await Promise.all(
     articleFile.articles.map(async (item) => {
-      if (!item.url || typeof item.url !== 'string' || item.url.trim() === '') {
+       if (!item.url || typeof item.url !== 'string' || item.url.trim() === '') {
         console.warn(`Invalid URL: ${item.url}`);
         return null; // Skip this item
-      }
-
+      } 
+      console.log('The URL: ' + item.url);
       let data;
       try {
-        // Delay for 1 second between requests
-        await delay(1000);
 
         // Fetch metadata and HTML from the URL
         const response = await fetch(item.url, {
@@ -32,6 +29,8 @@ export async function fetchArticles(): Promise<Article[]> {
           },
         });
 
+        console.log('Fetched: '+ item.url);
+
         if (!response.ok) {
           console.error(`HTTP error! Status: ${response.status} for URL: ${item.url}`);
           throw new Error(`HTTP error! Status: ${response.status}`);
@@ -41,11 +40,15 @@ export async function fetchArticles(): Promise<Article[]> {
         const $ = cheerio.load(html);
         const jsonScript = $('script[type="application/ld+json"]').html();
 
+        console.log('Gotten HTML response');
+
         if (!jsonScript) {
           throw new Error('No JSON-LD script found on page');
         }
 
         const metadata = JSON.parse(jsonScript);
+        console.log('Gotten metadata');
+
 
         // Combine metadata and HTML into a single object
         data = { metadata, html };
@@ -62,7 +65,8 @@ export async function fetchArticles(): Promise<Article[]> {
           imgUrl: '/img-2.jpg',
           siteName: 'Unknown site',
           url: item.url || '',
-        };
+        } as Article;
+        console.log('The default empty object has been returned here');
       }
 
       // Use the combined data (metadata and HTML) to construct the article object
@@ -76,15 +80,18 @@ export async function fetchArticles(): Promise<Article[]> {
         imgUrl: getImageURL(data) || item.image || '/img-2.jpg',
         siteName: getPlatform(data) || data.metadata?.publisher?.name || 'Unknown site',
         url: item.url || '',
-      };
+      } as Article;
+      console.log('Proper item returned');
     })
   );
 
-  // Sort the articles by published date in descending order
-  return results.sort((a, b) => {
+  // Filter out null values and sort the articles by published date in descending order
+  const filteredResults = results.filter((article): article is Article => article !== null);
+  const sortedResults = filteredResults.sort((a, b) => {
     const dateA = new Date(a.publishedDate || '').getTime();
     const dateB = new Date(b.publishedDate || '').getTime();
     return dateB - dateA;
   });
-  console.log(results);
+  console.log(sortedResults);
+  return sortedResults;
 }

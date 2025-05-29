@@ -45,12 +45,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
-        hostname: "",
+        hostname: "media.licdn.com",
         pathname: "/**",
       }
     ],
