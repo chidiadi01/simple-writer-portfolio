@@ -19,7 +19,9 @@ export default function Hero({ searchTerm, setSearchTerm }: HeroProps) {
             <p className="mt-4 mx-4 text-xlarge text-white md:text-xl text-justify md:text-center z-10" style={{ fontFamily: "Cormorant Garamond" }}>
                 My name is Chidiadi Anyanwu. I am a technical writer with a strong background in networking. 
                 I write about Networking, Cloud, DevOps, and even sometimes web development like this one. I built this
-                website with Next.js, and there's also an <a href="/" className="text-blue-500 hover:text-blue-700 hover:underline">article about that.</a>
+                website with Next.js, and there's also an <a href="https://freecodecamp.org/news/how-to-build-a-simple-portfolio-blog-with-nextjs
+
+" className="text-blue-500 hover:text-blue-700 hover:underline">article about that.</a>
                 &nbsp; This website holds my technical articles in one place. It is a repository of my written works.
             </p>
             <div id="searchbar" className="h-9xl mt-4 flex align-items-center justify-center w-full" >
