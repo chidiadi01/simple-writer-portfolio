@@ -11,6 +11,7 @@ export async function fetchArticles(): Promise<Article[]> {
   console.log('Fetching articles...');
   const results = await Promise.all(
     articleFile.articles.map(async (item) => {
+      //Fetch from URL
        if (!item.url || typeof item.url !== 'string' || item.url.trim() === '') {
         console.warn(`Invalid URL: ${item.url}`);
         return null; // Skip this item

@@ -37,14 +37,24 @@ const ArticleCard = ({ articles }: ArticleProps) => {
                 data-site-name={item.siteName}
               >
                 
-                <Image
-                  src={item.imgUrl || '/img-2.jpg'}
-                  alt={item.title || 'Article Image'}
-                  width={350}
-                  height={400}
-                  className="object-cover rounded-[10px]"
-                />
-                
+                {item.siteName?.toLowerCase().includes('substack') ? (
+                    <Image
+                      src={item.imgUrl || '/img-2.jpg'}
+                      alt={item.title || 'Article Image'}
+                      fill
+                      className="object-cover rounded-[10px] w-auto h-auto relative"
+                    />
+                  ) : (
+                    <Image
+                      src={item.imgUrl || '/img-2.jpg'}
+                      alt={item.title || 'Article Image'}
+                      width={350}
+                      height={400}
+                      className="object-cover rounded-[10px]"
+                    />
+                  )
+                }
+
                 <div className="flex h-[43px] text-[14px] text-gray-500 gap-2">
                   <p id="Platform" className="py-2 h-[42px] md:text-sm mt-auto mb-auto">
                     {item.siteName}
