@@ -22,8 +22,13 @@ Here is what the project file structure looks like:
 
 ![Project File Structure](file-structure.png)
 
-In the root folder, we have the `public` and `src` folders. All the images and icons used in the project are in the public folder. The `src` folder has the `app`, `components`, and `utils` folders. The `app` folder is the main folder where the first `page.tsx` and `layout.tsx` folders are located. It also has the JSON file for the articles, and the `api` folder which houses the Route Handlers. With the App Router, you do not need to put your `route.ts` or `route.js` file inside the `api` folder. Just make sure it's somewhere in the `app` directory that does not have a `page` file.
+In the root folder, we have the `public` and `src` folders. All the images and icons used in the project are in the public folder. The `src` folder has the `app`, `components`, and `utils` folders. The `app` folder is the main folder where the first `page.tsx` and `layout.tsx` folders are located. It also has the JSON file for the articles, and the `api` folder which houses the Route Handlers. Initially necessary, but no longer necessary as I've restructured the project.
 
 The `components` folder holds the components, and the `utils` folder holds the functions for extracting various information from the object gotten from a HTTP response. This helps to determine article title, date published, description, cover image and others, from just the URL. Those are then used to build an array of Article objects.
 
-More details about the project are written in the article (not published yet).
+More details about the project are written in the [article](https://freecodecamp.org/news/how-to-build-a-simple-portfolio-blog-with-nextjs).
+
+## Modifications not in the article
+
+After deploying the project, I found that the server was not able to succesfully fetch from Substack. It is being blocked for some reason. So, I decided on another approach. I would use RSS feeds, and extract the necessary information from the feeds to make up the Substack cards.
+
