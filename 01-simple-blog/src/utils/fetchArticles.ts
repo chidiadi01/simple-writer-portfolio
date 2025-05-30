@@ -55,18 +55,8 @@ export async function fetchArticles(): Promise<Article[]> {
         data = { metadata, html };
       } catch (error) {
         console.error(`Failed to fetch metadata for URL: ${item.url}`, error);
-        // Return a default article object on failure
-        return {
-          ...item,
-          id: item.id ?? 0,
-          tags: item.tags ?? [],
-          title: item.title || 'No title',
-          description: item.description || 'No description',
-          publishedDate: 'No date',
-          imgUrl: '/img-2.jpg',
-          siteName: 'Unknown site',
-          url: item.url || '',
-        } as Article;
+        // Return no article object on failure
+        return null;
         console.log('The default empty object has been returned here');
       }
 
