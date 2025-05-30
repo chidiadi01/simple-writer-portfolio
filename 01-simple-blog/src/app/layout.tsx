@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Chidiadi Portfolio Blog",
-  description: "A simple portfolio website",
+  description: "Chidiadi's personal portfolio blog showcasing technical articles on networking, cloud, and DevOps.",
 };
 
 export default function RootLayout({
@@ -34,6 +34,17 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz@0,14..32;1,14..32&display=swap" rel="stylesheet" />
+
+         {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="Chidiadi Portfolio Blog" />
+        <meta property="og:description" content="Chidiadi's personal portfolio blog showcasing technical articles on networking, cloud, and DevOps." />
+        <meta property="og:image" content="/mpbi.png" />
+        <meta property="og:type" content="website" />
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Chidiadi Portfolio Blog" />
+        <meta name="twitter:description" content="Chidiadi's personal portfolio blog showcasing technical articles on networking, cloud, and DevOps." />
+        <meta name="twitter:image" content="/mpbi.png" />
       </head>
 
       <body
