@@ -2,7 +2,7 @@
     "articles": [
         {
             "id": 1,
-            "url": "https://thenetworkbits.substack.com/p/an-overview-of-json",
+            "url": "https://thenetworkbits.substack.com/feed",
             "tags": ["Web Dev", "DevOps", "Cloud"],
             "title": "",
             "description": "",
@@ -223,6 +223,15 @@
             "title": "",
             "description": "",
             "image": ""
+        },
+        {
+            "id": 29,
+            "url": "https://www.freecodecamp.org/news/how-to-build-a-simple-portfolio-blog-with-nextjs/",
+            "tags": ["Web Dev", "Next.js"],
+            "title": "",
+            "description": "",
+            "image": ""
         }
+    
     ]
 }
