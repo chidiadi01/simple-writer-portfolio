@@ -47,6 +47,11 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "media.licdn.com",
         pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "chidiadi.hashnode.dev",
+        pathname: "/**",
       }
     ],
   },
