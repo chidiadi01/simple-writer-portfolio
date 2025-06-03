@@ -60,8 +60,8 @@ export async function fetchArticles(): Promise<Article[]> {
       }
 
       // Use the combined data (metadata and HTML) to construct the article object
-      if(getTitle(data) && getDescription(data) &&
-         getPublishedDate(data) && getImageURL(data) &&
+      if((getTitle(data) || item.title) && (getDescription(data) || item.description)  &&
+         (getImageURL(data) || item.image) &&
          getPlatform(data) || (item.title && item.description &&
          item.image)) {
         return {
