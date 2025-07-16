@@ -55,7 +55,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "https://media2.dev.to",
+        hostname: "media2.dev.to",
         pathname: "/**",
       }
     ],
