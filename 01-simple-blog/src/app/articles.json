@@ -2,11 +2,11 @@
     "articles": [
         {
             "id": 1,
-            "url": "https://thenetworkbits.substack.com/p/an-overview-of-json",
+            "url": "https://dev.to/chidiadi01/an-overview-of-json-316i",
             "tags": ["Web Dev", "DevOps", "Cloud"],
-            "title": "An Overview of JSON",
-            "description": "How JSON is used in development and deployments",
-            "image": "https://substack-post-media.s3.amazonaws.com/public/images/8888c819-f77b-46cd-bde8-047185d55e55_6000x4000.jpeg"
+            "title": "",
+            "description": "",
+            "image": ""
         },
         {
             "id": 2,
