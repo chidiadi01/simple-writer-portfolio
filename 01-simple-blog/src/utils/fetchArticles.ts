@@ -51,14 +51,14 @@ export async function fetchArticles(): Promise<Article[]> {
     try {
       // If the URL looks like an RSS/Atom feed, parse as RSS
       if (item.url.endsWith('feed') || item.url.endsWith('rss')) {
-        const response = await fetch('https://corsproxy.io/?url='+item.url, {
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36',
-          'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-          'Accept-Language': 'en-US,en;q=0.5',
-          'Referer': 'https://www.google.com/',
-        },
-      });
+        const response = await fetch('https://corsproxy.io/?key=587f5b36&url=' + item.url, {
+          headers: {
+            'Accept': 'application/xml; charset=utf-8',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36',
+            'Accept-Language': 'en-US,en;q=0.5',
+            'Referer': 'https://www.google.com/',
+          },
+        });
         if (!response.ok) {
           console.error(`HTTP error! Status: ${response.status} for URL: ${item.url}`);
           results.push(null);
