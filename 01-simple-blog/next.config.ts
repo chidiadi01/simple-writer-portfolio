@@ -57,7 +57,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "media2.dev.to",
         pathname: "/**",
-      }
+      },
+      {        protocol: "https",
+        hostname: "substack-post-media.s3.amazonaws.com", 
+        pathname: "/**",}
     ],
   },
 };
