@@ -16,7 +16,7 @@ export default function Hero({ searchTerm, setSearchTerm }: HeroProps) {
         <div className="bg-[url('/img-one-1.jpg')] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center h-[400px] relative">
            <div className=" absolute inset-0 bg-black opacity-60"></div> 
             <h1 className="text-4xl text-white font-bold text-center z-10">My Portfolio Blog</h1>
-            <p className="mt-4 mx-4 text-xlarge text-white md:text-xl text-justify md:text-center z-10" style={{ fontFamily: "Cormorant Garamond" }}>
+            <p className="mt-4 mx-4 text-xlarge text-white md:text-xl text-justify md:text-center z-10" style={{ fontFamily: "Poppins" }}>
                 My name is Chidiadi Anyanwu. I am a technical writer with a strong background in networking. 
                 I write about Networking, Cloud, DevOps, and even sometimes web development like this one. I built this
                 website with Next.js, and there's also an <a href="https://freecodecamp.org/news/how-to-build-a-simple-portfolio-blog-with-nextjs
