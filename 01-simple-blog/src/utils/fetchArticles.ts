@@ -54,7 +54,7 @@ export async function fetchArticles(): Promise<Article[]> {
         const response = await fetch('https://corsproxy.io/?key=587f5b36&url=' + item.url, {
           headers: {
             'Accept': 'application/xml; charset=utf-8',
-            'User-Agent': Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36,
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36',
             'Accept-Language': 'en-US,en;q=0.9', // Added language
             'DNT': '1', // Do Not Track
             'Sec-Fetch-Dest': 'document',
