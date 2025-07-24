@@ -8,11 +8,26 @@ import { Article } from '../components/ArticleCard';
 import * as cheerio from 'cheerio';
 import xml2js from 'xml2js';
 
+function cleanXml(xml: string): string {
+  // If the response is HTML with <pre> containing escaped XML
+  const match = xml.match(/<pre[^>]*>([\s\S]*?)<\/pre>/);
+  if (match) {
+    return match[1]
+      .replace(/&lt;/g, '<')
+      .replace(/&gt;/g, '>')
+      .replace(/&amp;/g, '&')
+      .replace(/&quot;/g, '"')
+      .replace(/&#39;/g, "'");
+  }
+  // Otherwise, assume it's raw XML
+  return xml;
+}
+
 function rss2article(xml: string): Article[] | null {
   try {
     let articles: Article[] = [];
     var parser = new xml2js.Parser();
-    xml2js.parseString(xml, (err: any, result: any) => {
+    xml2js.parseString(cleanXml(xml), (err: any, result: any) => {
       if (err) {
         console.error('Error parsing RSS feed:', err);
         return null;
@@ -25,7 +40,7 @@ function rss2article(xml: string): Article[] | null {
         publishedDate: new Date(item.pubDate[0]).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
         || 'No date',
         url: item.link?.[0] || '',
-        imgUrl: item.enclosure?.[0]?.$.url || '/img-2.jpg', // You can enhance this to extract images from enclosure or content
+        imgUrl: item.enclosure?.[0]?.$.url || '/img-2.jpg',
         siteName: result.rss?.channel?.[0]?.title?.[0] || 'RSS Feed',
         tags: [],
       }));
@@ -50,26 +65,25 @@ export async function fetchArticles(): Promise<Article[]> {
 
     try {
       // If the URL looks like an RSS/Atom feed, parse as RSS
-      if (item.url.endsWith('feed') || item.url.endsWith('rss')) {
-        const response = await fetch('https://corsproxy.io/?key=587f5b36&url=' + item.url, {
-          headers: {
-            'Accept': 'application/xml; charset=utf-8',
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36',
-            'Accept-Language': 'en-US,en;q=0.9', // Added language
-            'DNT': '1', // Do Not Track
-            'Sec-Fetch-Dest': 'document',
-            'Sec-Fetch-Mode': 'navigate',
-            'Sec-Fetch-Site': 'none',
-            'Sec-Fetch-User': '?1',
-          },
-        });
-        
+      if (item.url.endsWith('/feed') || item.url.endsWith('/rss')) {
+        const response = await fetch(`https://production-sfo.browserless.io/content?token=${process.env.BROWSERLESS_TOKEN}`, {
+              method: "POST",
+              headers:  {
+                "Cache-Control": "no-cache",
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+              url: item.url,
+              }),
+            });
+
         if (!response.ok) {
           console.error(`HTTP error! Status: ${response.status} for URL: ${item.url}`);
           results.push(null);
           continue;
         }
         const xml = await response.text();
+        console.log(xml);
         const articles = rss2article(xml);
         if (articles) {
           results.push(articles);
