@@ -23,6 +23,7 @@ function cleanXml(xml: string): string {
   return xml;
 }
 
+/*
 function rss2article(xml: string): Article[] | null {
   try {
     let articles: Article[] = [];
@@ -50,7 +51,32 @@ function rss2article(xml: string): Article[] | null {
     console.error('Error parsing RSS feed:', err);
     return null;
   }
+} */
+
+async function rss2article(xml: string): Promise<Article[] | null> {
+  try {
+    let articles: Article[] = [];
+    const parser = new xml2js.Parser();
+    const result = await parser.parseStringPromise(cleanXml(xml));
+    const items = result.rss?.channel?.[0]?.item || [];
+    articles = items.map((item: any, idx: number) => ({
+        id: idx + 1,
+        title: item.title?.[0] || 'No title',
+        description: item.description?.[0] || 'No description',
+        publishedDate: new Date(item.pubDate[0]).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+        || 'No date',
+        url: item.link?.[0] || '',
+        imgUrl: item.enclosure?.[0]?.$.url || '/img-2.jpg',
+        siteName: result.rss?.channel?.[0]?.title?.[0] || 'RSS Feed',
+        tags: [],
+      }));
+    return articles;
+  } catch (err) {
+    console.error('Error parsing RSS feed:', err);
+    return null;
+  }
 }
+
 
 export async function fetchArticles(): Promise<Article[]> {
   console.log('Fetching articles...');
@@ -84,7 +110,7 @@ export async function fetchArticles(): Promise<Article[]> {
         }
         const xml = await response.text();
         console.log(xml);
-        const articles = rss2article(xml);
+        const articles = await rss2article(xml);
         if (articles) {
           results.push(articles);
         } else {
