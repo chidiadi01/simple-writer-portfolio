@@ -172,5 +172,6 @@ export async function fetchArticles(): Promise<Article[]> {
     return dateB - dateA;
   });
   console.log(sortedResults);
+  console.log(sortedResults.length + ' articles fetched and sorted.');
   return sortedResults;
 }
