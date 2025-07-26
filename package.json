@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "@types/xml2js": "^0.4.14"
+  }
+}
