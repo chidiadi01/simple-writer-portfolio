@@ -1,0 +1,32 @@
+{
+    "articles": [
+        {
+            "id": 1,
+            "url": "https://thenetworkbits.substack.com/feed",
+            "tags": ["Web Dev", "DevOps", "Cloud"],
+            "title": "An Overview of JSON",
+            "description": "How JSON is used in development and deployments",
+            "image": "https://substack-post-media.s3.amazonaws.com/public/images/8888c819-f77b-46cd-bde8-047185d55e55_6000x4000.jpeg"
+        },
+        
+         {
+           "id":2,
+            "url":"https://www.freecodecamp.org/news/deploy-to-vercel-with-github-actions/",
+            "tags":["Web Dev", "DevOps"],
+            "title":"",
+            "description":"",
+            "image":""
+
+         },
+         {
+           "id":3,
+            "url":"https://dev.to/alifar/kiro-vs-copilot-this-could-change-the-way-you-code-forever-4kaa",
+            "tags":[],
+            "title":"",
+            "description":"",
+            "image":""
+         }
+    
+         
+    ]
+}
