@@ -5,10 +5,6 @@ import Navbar from ".src/components/navbar";
 import Footer from ".src/components/footer";
 import { Analytics } from "@vercel/analytics/next"
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz@0,14..32;1,14..32&display=swap');
-</style>
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
