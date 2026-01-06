@@ -54,7 +54,7 @@ export default function RootLayout({
         {children}
         <Analytics />
         <Footer />
-        <script src="https://webFeedbackBox.com/widget.js" data-widget-id="wfb_PowBPgitJ746GW7JqebQlBst" data-position="bottom-right" data-theme="default" data-type="emoji" data-language="en"></script>
+        <script src="https://webFeedbackBox.com/widget.js" data-widget-id="wfb_RJtaJ6DCnk01vd4Q5Z2fHTnm" data-position="bottom-right" data-theme="default" data-type="emoji" data-language="en"></script>
       </body>
     </html>
   );
