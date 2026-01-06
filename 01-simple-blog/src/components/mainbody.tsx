@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import ArticleCard, { Article } from './ArticleCard';
+import ArticleSkeleton from './ArticleSkeleton';
 
 
 
@@ -78,7 +79,10 @@ export default function MainBody({ searchTerm, articles }: MainBodyProps) {
       </div>
 
       <div id="articlegrid" className="w-[100vw] md:w-[98vw] grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-5 px-3 py-3">
-        <ArticleCard articles={filteredArticles} />
+        <Suspense fallback={<ArticleSkeleton />}>
+          <ArticleCard articles={filteredArticles} />
+        </Suspense>
+        
       </div>
     </div>
   );

@@ -29,7 +29,7 @@ const ArticleCard = ({ articles }: ArticleProps) => {
           return (
             <a key={id} href={item.url || '#'} className="max-w-[350px] mx-auto mb-5">
               <div
-                className="sm:w-[350px] hover:brightness-70"
+                className="sm:w-[350px] hover:brightness-70 group"
                 data-title={item.title}
                 data-description={item.description}
                 data-published-date={item.publishedDate}
@@ -54,29 +54,17 @@ const ArticleCard = ({ articles }: ArticleProps) => {
                     {item.publishedDate}
                   </p>
                 </div>
-                <h1 id="titleOfArticle" className="font-bold text-base md:text-3xl">
+                <h1 id="titleOfArticle" className="font-bold text-black group-hover:text-gray-500 text-base md:text-3xl">
                   {item.title}
                 </h1>
                 <br />
-                <p className="w-full md:w-[350px]">{item.description}</p>
+                <p className="w-full md:w-[350px] text-black group-hover:text-gray-500">{item.description}</p>
               </div>
             </a>
           );
         })
       ) : (
-        // Placeholder for loading state
-        'LOADING . . .'
-        // Uncomment the following block if you want to use placeholders in the future
-        /*
-        Array(6)
-          .fill(0)
-          .map((_, id) => (
-            <div
-              key={id}
-              className="w-full md:w-[350px] h-[350px] bg-gray-500 mx-auto mb-5 hover:brightness-80 rounded-[10px] animate-pulse"
-            ></div>
-          ))
-        */
+        <></>
       )}
     </>
   );
