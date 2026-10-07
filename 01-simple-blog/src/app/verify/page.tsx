@@ -45,7 +45,8 @@ const groups: Group[] = [
       {
         title: "Kubernetes and CLoud Native Essentials (LFS250)",
         detail: "April, 2026",
-        href: "https://lnkd.in/p/enTRKyXm"
+        href: "https://lnkd.in/p/enTRKyXm",
+        label: "View"
       },
       {
         title: "OCI 2025 Certified DevOps Professional",
