@@ -43,6 +43,11 @@ const groups: Group[] = [
     heading: "Certifications",
     items: [
       {
+        title: "Kubernetes and CLoud Native Essentials (LFS250)",
+        detail: "April, 2026",
+        href: "https://lnkd.in/p/enTRKyXm"
+      },
+      {
         title: "OCI 2025 Certified DevOps Professional",
         detail: "Nov 2025",
         href: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=F7D6B550FDC46283DDC071575D82BE7649AE32864277BD8AC0BFDED669E7F340",
