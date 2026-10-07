@@ -94,7 +94,7 @@ const groups: Group[] = [
         title: "Huawei Certified ICT Associate (HCIA-Datacom)",
         detail: "Apr 2020",
         href: "https://www.linkedin.com/in/chidiadi-anyanwu/overlay/Certifications/2047425099/treasury/?profileId=ACoAACymyTUBUgpIjj_wXFCpESGDVdaqg-y3GKw",
-        label: "Verify",
+        label: "Verify"
       },
     ],
   },
