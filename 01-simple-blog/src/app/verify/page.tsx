@@ -108,6 +108,12 @@ const groups: Group[] = [
         label: "View write-up",
       },
       {
+        title: "Net Glossary",
+        detail: "An online dictionary for networking and infrastructure related terms",
+        href: "https://netglossary.net",
+        label: "Visit site"
+      },
+      {
         title: "Personal Portfolio & Blog",
         detail: "Next.js, Tailwind CSS",
         href: "https://github.com/chidiadi01/simple-writer-portfolio/tree/main/01-simple-blog",
