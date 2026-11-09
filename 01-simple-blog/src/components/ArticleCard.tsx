@@ -36,7 +36,7 @@ const ArticleCard = ({ articles }: ArticleProps) => {
                 data-tag="Networking"
                 data-site-name={item.siteName}
               >
-                
+
                 <Image
                   src={item.imgUrl || '/img-2.jpg'}
                   alt={item.title || 'Article Image'}
@@ -44,7 +44,7 @@ const ArticleCard = ({ articles }: ArticleProps) => {
                   height={400}
                   className="object-cover rounded-[10px]"
                 />
-                
+
                 <div className="flex h-[43px] text-[14px] text-gray-500 gap-2">
                   <p id="Platform" className="py-2 h-[42px] md:text-sm mt-auto mb-auto">
                     {item.siteName}
@@ -58,7 +58,8 @@ const ArticleCard = ({ articles }: ArticleProps) => {
                   {item.title}
                 </h1>
                 <br />
-                <p className="w-full md:w-[350px] text-black group-hover:text-gray-500">{item.description}</p>
+                <p className="w-full md:w-[350px] text-black group-hover:text-gray-500">{item.description ? (item.description.replace(/<[^>]*>/g, '').length > 150 ? item.description.replace(/<[^>]*>/g, '').substring(0, 150) + '...' : item.description.replace(/<[^>]*>/g, '')) : ''}
+                </p>
               </div>
             </a>
           );
